@@ -3,7 +3,7 @@
 }
 .mp_container {
   height: 100vh;
-  background: $secondaryColor;
+  // background: $secondaryColor;
 }
 .page_section {
   position: absolute;
@@ -67,7 +67,7 @@
           font-size: 0.85rem;
           line-height: 1.1rem;
           &:last-child {
-            color: darken(gray, 10%);
+            color: darken(gray, 50%);
             font-size: 1.2rem;
             line-height: 1.5rem;
           }
@@ -100,6 +100,22 @@
       font-size: 0.95rem;
       letter-spacing: 0.05rem;
     }
+    .skw-page__skewed {
+      &:after {
+        content: "";
+        position: absolute;
+        left: -5px;
+        bottom: 0;
+        width: 105px;
+        height: 430px;
+      }
+    }
+  }
+  .skw-page__half--left {
+    .skw-page__content {
+      align-items: flex-start;
+      padding: 0% 20% 0% 40%;
+    }
   }
 }
 
@@ -111,7 +127,6 @@
       align-items: flex-start;
       justify-content: flex-start;
     }
-
     p {
       font-weight: 300;
       font-size: 0.95rem;
@@ -119,5 +134,63 @@
       margin-left: 150px;
       text-align: start;
     }
+    .skw-page__skewed {
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100px;
+        height: 270px;
+      }
+    }
+  }
+}
+
+.skw-page-2,
+.skw-page-5 {
+  .skw-page__skewed {
+    &::after {
+      background: $color-green;
+    }
+  }
+}
+.skw-page-3 {
+  .skw-page__skewed {
+    &::after {
+      background: $primaryColor;
+    }
+  }
+}
+.skw-page-4 {
+  .skw-page__skewed {
+    &::after {
+      background: #378ab3;
+    }
+  }
+}
+.wrapp {
+  img {
+    height: 100%;
+  }
+  .wrapp-item {
+    background-size: cover;
+    // background-position-x: -30%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+}
+.page_btn {
+  padding: 16px 22px;
+  border-radius: 50%;
+  border: 1px #fff solid;
+  border-radius: 50%;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  cursor: pointer;
+  &:hover {
+    background: #fff;
+    color: $secondaryColor;
+    transition: all 1s;
   }
 }

@@ -157,7 +157,7 @@ $(document).ready(function () {
 
   var h = $(window).height(),
     wrap = $(".wrapp"),
-    image = wrap.find("img"),
+    image = wrap.find(".wrapp-item"),
     len = image.length,
     i = 0,
     seconds = 5000;
@@ -188,6 +188,8 @@ $(document).ready(function () {
       visibility: "visible",
       opacity: 1,
     });
+    // image.children("img").css({ opacity: 0, visibility: "hidden" });
+    // image.eq(i).children("img").css({ opacity: 1, visibility: "visible" });
     // txt.text(image.eq(i).attr("alt"));
   }
   /* Show the first image on load */

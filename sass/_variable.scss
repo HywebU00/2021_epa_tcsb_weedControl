@@ -10,7 +10,7 @@ $linkColor: #0066cc; //連結
 $importantColor: #eb0202; //重要
 // 但注意真實顏色與語意的關聯必須易於辨識
 $color-blue: #0066cc;
-$color-green: #298729;
+$color-green: #ccdf44; //#298729;
 $color-orange: #d04500;
 $color-red: #d30000;
 $color-yellow: #fec003;
@@ -27,6 +27,16 @@ $aFocus: $primaryColor; //#ff3e4d;
 // 表單focus顏色
 $form-focus: #0066cc; //表單
 $form-btn: #0066cc; //表單
+
+//背景色漸層
+$bg-color: linear-gradient(
+  to bottom,
+  $color-green 0%,
+  $primaryColor 20%,
+  $secondaryColor 50%,
+  $secondaryColor 80%
+);
+
 //------------------------------------------------------字型--------//
 
 // 字型設定
