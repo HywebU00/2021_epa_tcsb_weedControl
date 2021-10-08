@@ -38,7 +38,7 @@ $bg-color: linear-gradient(
 );
 
 $bg-color-reverse: linear-gradient(to top, $primaryColor, $secondaryColor);
-
+$bg-color-deep: linear-gradient(to bottom, $primaryColor, $secondaryColor);
 //------------------------------------------------------字型--------//
 
 // 字型設定
