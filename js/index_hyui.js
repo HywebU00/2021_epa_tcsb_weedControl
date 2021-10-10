@@ -168,9 +168,9 @@ $(function () {
       menu_status = false;
       _sidebar.hide();
       _overlay.hide();
-      _mArea.css({
-        "margin-left": _mArea.width() * -1 + "px",
-      });
+      // _mArea.css({
+      //   "margin-left": _mArea.width() * -1 + "px",
+      // });
       liHasChild_level1.on({
         mouseenter: function () {
           $(this)

@@ -2,6 +2,11 @@
   overflow: hidden;
   position: relative;
   height: 100vh;
+  @include screen("mobile") {
+    // overflow: auto;
+    height: auto;
+    width: 100vw;
+  }
 }
 
 $skewDeg: 18deg;
@@ -15,6 +20,11 @@ $scrollTime: 1s;
   width: 100%;
   z-index: 1;
 
+  @include screen("mobile") {
+    position: relative;
+    height: 100vh;
+  }
+
   &__half {
     position: absolute;
     top: 0;
@@ -25,11 +35,17 @@ $scrollTime: 1s;
     &--left {
       left: 0;
       transform: translate3d(-$magicVH, 100%, 0);
+      @include screen("mobile") {
+        transform: none;
+      }
     }
 
     &--right {
       left: 50%;
       transform: translate3d($magicVH, -100%, 0);
+      @include screen("mobile") {
+        transform: none;
+      }
     }
 
     .skw-page.active & {
@@ -44,7 +60,6 @@ $scrollTime: 1s;
     width: 140%;
     height: 100%;
     transform: skewX($skewDeg * -1);
-    //background: $secondaryColor; //#000;
 
     .skw-page__half--left & {
       left: -40%;
@@ -69,6 +84,9 @@ $scrollTime: 1s;
     transform: skewX($skewDeg);
     transition: transform $scrollTime, opacity $scrollTime;
     background-size: cover;
+    @include screen("tablet") {
+      align-items: center;
+    }
 
     .skw-page__half--left & {
       padding-left: 30%;
@@ -92,6 +110,9 @@ $scrollTime: 1s;
       letter-spacing: 0.1em;
       text-align: left;
       width: 100%;
+      @include screen("xs_mobile") {
+        font-size: 2em;
+      }
     }
     .skw-page__description {
       display: contents;
@@ -101,6 +122,9 @@ $scrollTime: 1s;
       font-weight: 400;
       span {
         margin-bottom: 1.5em;
+        @include screen("tablet") {
+          margin-bottom: 0.8em;
+        }
       }
     }
   }
@@ -130,6 +154,9 @@ $scrollTime: 1s;
         rgba(66, 54, 187, 0.8) 50%,
         rgba(66, 54, 187, 0.8) 80%
       );
+    }
+    @include screen("mobile") {
+      height: 70vh;
     }
   }
   &-2 {
