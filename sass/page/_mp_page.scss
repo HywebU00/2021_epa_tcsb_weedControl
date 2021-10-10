@@ -294,7 +294,7 @@
       width: 450px;
       height: 222px;
       position: absolute;
-      background-image: url(../../images/img/num-04.png);
+      background-image: url(../images/img/num-04.png);
       @include screen("tablet") {
         width: 250px;
         background-size: contain;
@@ -336,7 +336,7 @@
   }
   .skw-page__half--right {
     &::before {
-      background-image: url(../../images/img/num-02.png);
+      background-image: url(../images/img/num-02.png);
     }
   }
 }
@@ -348,7 +348,7 @@
   }
   .skw-page__half--left {
     &::before {
-      background-image: url(../../images/img/num-03.png);
+      background-image: url(../images/img/num-03.png);
     }
   }
 }
@@ -362,13 +362,13 @@
     background-position: bottom left;
   }
   .wrapp-item-1 {
-    background-image: url(../../images/img/banner_01.jpg);
+    background-image: url(../images/img/banner_01.jpg);
   }
   .wrapp-item-2 {
-    background-image: url(../../images/img/banner_02.jpg);
+    background-image: url(../images/img/banner_02.jpg);
   }
   .wrapp-item-3 {
-    background-image: url(../../images/img/banner_03.jpg);
+    background-image: url(../images/img/banner_03.jpg);
   }
   @include screen("mobile") {
     height: 70vh !important;
@@ -420,7 +420,7 @@
     &::after {
       content: "";
       position: absolute;
-      background-image: url(../../images/img/grass.png);
+      background-image: url(../images/img/grass.png);
       height: 365px;
       width: 125px;
       bottom: 0;
@@ -458,7 +458,7 @@
       }
     }
     .skw-page__heading {
-      background: url(../../images/img/headertext_01.png);
+      background: url(../images/img/headertext_01.png);
       width: 660px;
       height: 174px;
       transform: skewX($skewDeg * -1);
@@ -479,7 +479,7 @@
       }
     }
     .skw-page__description {
-      background: url(../../images/img/headertext_02.png);
+      background: url(../images/img/headertext_02.png);
       width: 660px;
       height: 100px;
       transform: skewX($skewDeg * -1);
@@ -520,7 +520,7 @@
     border: none;
   }
   .sidebarCtrl {
-    background-image: url(../../images/img/menu_icon.png);
+    background-image: url(../images/img/menu_icon.png);
     &::after {
       content: "";
       position: absolute;
@@ -532,7 +532,7 @@
     }
   }
   .searchCtrl {
-    background-image: url(../../images/img/search_icon.png);
+    background-image: url(../images/img/search_icon.png);
   }
 }
 .skw-page__searchContent {
@@ -650,7 +650,7 @@
   .close {
     top: 20px;
     right: 20px;
-    background: url(../../images/icon/icon_close3.svg) no-repeat center center;
+    background: url(../images/icon/icon_close3.svg) no-repeat center center;
     background-size: 100%;
   }
   @include screen("mobile") {
@@ -711,14 +711,14 @@
     z-index: 98;
     box-sizing: border-box;
     background-size: cover;
-    background-image: url(../../images/img/menu_bg.png);
+    background-image: url(../images/img/menu_bg.png);
 
     button {
       background-color: rgba(0, 0, 0, 0);
       border: none;
       width: 51px;
       height: 51px;
-      background-image: url(../../images/img/icon__colse.png);
+      background-image: url(../images/img/icon__colse.png);
       position: absolute;
       right: 50px;
       top: 50px;
@@ -791,19 +791,19 @@
         margin-right: 0.5em;
       }
       a[title="line"] {
-        background-image: url(../../images/img/icon__line.png);
+        background-image: url(../images/img/icon__line.png);
         display: inline-block;
         height: 48px;
         width: 48px;
       }
       a[title="facebook"] {
-        background-image: url(../../images/img/icon__fb.png);
+        background-image: url(../images/img/icon__fb.png);
         display: inline-block;
         height: 48px;
         width: 48px;
       }
       a[title="youtube"] {
-        background-image: url(../../images/img/icon__yt.png);
+        background-image: url(../images/img/icon__yt.png);
         display: inline-block;
         height: 48px;
         width: 48px;

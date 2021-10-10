@@ -164,12 +164,12 @@ $scrollTime: 1s;
       background: $bg-color;
     }
     .skw-page__half--right .skw-page__content {
-      background-image: url("../../images/img/setcion_02.jpg");
+      background-image: url("../images/img/setcion_02.jpg");
       background-repeat: no-repeat;
       z-index: 2;
     }
     .skw-page__half--left .skw-page__content {
-      background-image: url("../../images/img/setcion_02_opacity.png");
+      background-image: url("../images/img/setcion_02_opacity.png");
       background-repeat: no-repeat;
       background-size: 100% 100%;
     }
@@ -181,11 +181,11 @@ $scrollTime: 1s;
   }
   &-3 {
     .skw-page__half--left .skw-page__content {
-      background-image: url("../../images/img/setcion_03.jpg");
+      background-image: url("../images/img/setcion_03.jpg");
       background-repeat: no-repeat;
     }
     .skw-page__half--right .skw-page__content {
-      background-image: url("../../images/img/setcion_03_opacity.png");
+      background-image: url("../images/img/setcion_03_opacity.png");
       background-repeat: no-repeat;
       background-size: 100% 100%;
       background-position-x: right;
@@ -204,12 +204,12 @@ $scrollTime: 1s;
       background: $bg-color;
     }
     .skw-page__half--left .skw-page__content {
-      background-image: url("../../images/img/setcion_04_opacity.png");
+      background-image: url("../images/img/setcion_04_opacity.png");
       background-size: 100% 100%;
       background-repeat: no-repeat;
     }
     .skw-page__half--right .skw-page__content {
-      background-image: url("../../images/img/setcion_04.jpg");
+      background-image: url("../images/img/setcion_04.jpg");
       background-repeat: no-repeat;
     }
     @media screen and (min-width: 1800px) {
@@ -220,14 +220,14 @@ $scrollTime: 1s;
   }
   &-5 {
     .skw-page__half--left .skw-page__content {
-      background-image: url("../../images/img/setcion_05.jpg");
+      background-image: url("../images/img/setcion_05.jpg");
       background-repeat: no-repeat;
     }
     .skw-page__half--right .skw-page__skewed {
       background: $bg-color;
     }
     .skw-page__half--right .skw-page__content {
-      background-image: url("../../images/img/setcion_05_opacity.png");
+      background-image: url("../images/img/setcion_05_opacity.png");
       background-repeat: no-repeat;
       background-position-x: right;
       background-size: 100% 100%;
