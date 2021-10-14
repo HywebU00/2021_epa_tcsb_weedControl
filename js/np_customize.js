@@ -212,25 +212,14 @@ $(function () {
   //     });
   // });
 
-  //最新消息視窗
-
-  $(".modal").prepend('<button type="button" class="close">關閉</button>'); //新增關閉按鈕
-  function openModal() {
-    $(".modal").fadeIn(100);
-    $("body").addClass("noscroll");
-  }
-  openModal();
-  //關閉function
-  function closeModal() {
-    $("#modal1").hide();
-    $("body").removeClass("noscroll");
-  }
-  //點選關閉按鈕及透明底都可關閉
-  $(".modal .close").click(closeModal);
-
   //skw-page__searchContent 搜尋匡打開與關上
   $(".searchCtrl").click(function () {
-    console.log("123");
     $(".skw-page__searchContent").toggleClass("show");
   });
+});
+
+$(".condition").click(function (e) {
+  e.preventDefault();
+  $(".condition_block").slideToggle();
+  // $(".condition_block").toggleClass("show_content");
 });

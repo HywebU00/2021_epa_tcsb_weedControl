@@ -3,8 +3,8 @@
 
 //---------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$primaryColor: #95c14b; //#0066cc; //主色
-$secondaryColor: #4236bb; //#781f79; //輔色
+$primaryColor: #4236bb; //主色
+$secondaryColor: #95c14b; //輔色
 $lightColor: #fec003; //點綴
 $linkColor: #0066cc; //連結
 $importantColor: #eb0202; //重要
@@ -32,13 +32,13 @@ $form-btn: #0066cc; //表單
 $bg-color: linear-gradient(
   to bottom,
   $color-green 0%,
-  $primaryColor 20%,
-  $secondaryColor 50%,
-  $secondaryColor 80%
+  $secondaryColor 20%,
+  $primaryColor 50%,
+  $primaryColor 80%
 );
 
-$bg-color-reverse: linear-gradient(to top, $primaryColor, $secondaryColor);
-$bg-color-deep: linear-gradient(to bottom, $primaryColor, $secondaryColor);
+$bg-color-reverse: linear-gradient(to top, $secondaryColor, $primaryColor);
+$bg-color-deep: linear-gradient(to bottom, $secondaryColor, $primaryColor);
 //------------------------------------------------------字型--------//
 
 // 字型設定

@@ -44,6 +44,7 @@ $(document).ready(function () {
     pgWidth = $(window).width();
     // console.log(pgWidth);
     if (pgWidth < 767 || pgWidth === 767) {
+      window.reload();
       return;
     }
     if (scrolling) return;

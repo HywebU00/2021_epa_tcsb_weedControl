@@ -1,0 +1,114 @@
+.topfunction {
+  ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  li {
+    list-style-type: none;
+    margin-right: 1em;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      color: $primaryColor;
+      padding-left: 25px;
+
+      &:hover {
+        color: darken($primaryColor, 30%);
+      }
+    }
+    .rss {
+      background: no-repeat 0 center url(../images/img/icon_rss.png);
+    }
+    .condition {
+      background: no-repeat 0 center url(../images/img/icon_condition.png);
+    }
+  }
+}
+.condition_block {
+  display: none;
+  .flex-form {
+    margin-top: 0;
+  }
+}
+.pagination {
+  .page {
+    li.active {
+      a {
+        background: $primaryColor;
+      }
+    }
+  }
+}
+.lp {
+  .list > ul > li {
+    time {
+      display: inline-block;
+    }
+  }
+  .list > ul > li > a:hover {
+    color: $primaryColor;
+  }
+}
+.listTb {
+  margin-bottom: 2em;
+  td {
+    &:first-child {
+      text-align: center;
+    }
+  }
+  tr > td {
+    a {
+      color: $primaryColor;
+      &:hover {
+        color: darken($primaryColor, 30%);
+      }
+    }
+    span {
+      margin-left: 0.5em;
+      color: #666;
+    }
+  }
+}
+.listPhoto {
+  margin: 0 2em;
+  .caption {
+    h2 {
+      font-size: 1.2em;
+      line-height: 1.5em;
+      height: 3em;
+      overflow: hidden;
+    }
+  }
+  .thumbnail {
+    border: 1px solid #8080806e;
+    box-shadow: 0 0 3em -1.5em rgba(0, 0, 0, 0);
+    time {
+      background: url(../images/img/icon_time.png) no-repeat center left;
+      padding-left: 1.2em;
+    }
+    &:hover {
+      box-shadow: 0 0 3em -1.5em rgba(0, 0, 0, 0.5);
+      border: 1px solid lighten($primaryColor, 30%);
+      h2 {
+        color: $primaryColor;
+      }
+      time {
+        color: #555;
+      }
+    }
+  }
+}
+.listPhoto .thumbnail {
+  flex-basis: calc(100% / 12 * 4 - 20px);
+  max-width: calc(100% / 12 * 4 - 10px);
+}
+.center_block {
+  .section_title {
+    font-size: 1.625em;
+    color: darken($primaryColor, 10);
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid $primaryColor;
+  }
+}

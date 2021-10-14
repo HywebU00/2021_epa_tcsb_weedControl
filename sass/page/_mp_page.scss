@@ -1,4 +1,4 @@
-.mp_main {
+.main {
   padding: 0;
 }
 .mp_container {
@@ -26,9 +26,12 @@
     color: #fff;
     line-height: 2em;
     display: block;
+    &:focus {
+      box-shadow: 0 0px 0px 2px $secondaryColor inset;
+    }
   }
   .fullpage_btn-active {
-    border-left: 0.2em solid $primaryColor;
+    border-left: 0.2em solid $secondaryColor;
   }
 }
 .skw-header {
@@ -50,6 +53,7 @@
     @include screen("mobile") {
       padding: 0;
       text-align: unset;
+      z-index: 10;
     }
     + span {
       position: absolute;
@@ -113,16 +117,6 @@
       }
     }
   }
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   left: -1em;
-  //   border-style: solid;
-  //   border-width: 500px 154px 0 0;
-  //   border-color: #fff transparent transparent transparent;
-  //   z-index: 1;
-  // }
 }
 .skw-page-2,
 .skw-page-4 {
@@ -307,7 +301,7 @@
         height: 270px;
         z-index: 3;
         display: none;
-        background: $primaryColor;
+        background: $secondaryColor;
         @include screen("mobile") {
           display: block;
         }
@@ -367,7 +361,7 @@
 .skw-page-3 {
   .skw-page__skewed {
     &::after {
-      background: $primaryColor;
+      background: $secondaryColor;
     }
   }
   .skw-page__half--right {
@@ -438,7 +432,7 @@
   color: #fff;
   &:hover {
     background: #fff;
-    color: $secondaryColor;
+    color: $primaryColor;
     transition: all 1s;
   }
   &:focus {
@@ -596,21 +590,42 @@
     width: 360px;
     height: 90px;
     padding: 1em 0.3em 0em;
-    background-color: #353535;
+    background: #00000080;
+    border-radius: 5px;
     position: absolute;
     top: 150px;
     right: 20px;
     z-index: 999;
     flex-wrap: wrap;
 
+    @include screen("mobile") {
+      top: 66px;
+      right: 70px;
+    }
     .form_grp {
       display: flex;
       width: 60%;
+      label {
+        font-size: 0;
+      }
+      input {
+        width: 100%;
+        margin-left: 1em;
+      }
     }
     .btn_grp {
-      position: relative;
-      padding: 0;
+      position: absolute;
+      right: 0px;
+      top: 16px;
+      input {
+        margin-right: 1em;
+        background-color: $color-green;
+        border: none;
+        color: darken($primaryColor, 30);
+        height: 40px;
+      }
     }
+
     .form_grp input[type="submit"] {
       font-size: 0em;
       width: 30px !important;
@@ -620,18 +635,15 @@
       border: none;
       display: inline-block;
       margin-left: -40px !important;
-      margin-top: -2px !important;
+      margin-top: 10px !important;
       opacity: 0.8;
     }
-    // label {
-    //   display: none;
-    // }
     .keywordHot {
-      // display: block;
       margin-left: 1.5em;
       padding: 0.1em 0 0.3em;
-      width: 100%;
+
       text-align: left;
+      margin-top: -0.3em;
       ul {
         display: inline-block;
         font-size: 0.813em;
@@ -642,10 +654,16 @@
           margin: 0 0.6em 0 0;
           padding: 0;
           display: inline-block;
+          a {
+            color: #fff;
+          }
         }
       }
     }
   }
+}
+.skw-page__searchContent.show {
+  display: block;
 }
 .skw-page__menu_bg {
   width: 350px;
@@ -731,7 +749,7 @@
     }
   }
 }
-.wrapper {
+.skw-wrapper {
   &::after {
     content: "";
     position: absolute;
@@ -777,6 +795,10 @@
       position: absolute;
       right: 50px;
       top: 50px;
+      @include screen("mobile") {
+        right: 30px;
+        top: 20px;
+      }
     }
     li {
       list-style: none;
@@ -791,7 +813,6 @@
         font-weight: 500;
         font-size: 1.8em;
         padding: 0.5em 0;
-        // margin-bottom: 1em;
         display: inline-block;
         + ul {
           display: flex;
@@ -800,6 +821,8 @@
       ul {
         &:first-child {
           ul {
+            padding: 0;
+
             li {
               a {
                 font-weight: 400;
@@ -807,8 +830,6 @@
                 display: inline-block;
                 padding: 0.5em;
                 margin-bottom: 0;
-                display: none;
-                // visibility: hidden;
               }
             }
           }
@@ -834,7 +855,22 @@
               }
             }
           }
+          @include screen("mobile") {
+            position: relative;
+            width: 60%;
+            margin: 0 20%;
+            right: 0;
+          }
         }
+        @include screen("mobile") {
+          padding: 0;
+        }
+      }
+      @include screen("mobile") {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
     }
     .icon_list {
@@ -862,6 +898,13 @@
         display: inline-block;
         height: 48px;
         width: 48px;
+      }
+      @include screen("mobile") {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        left: 0;
+        padding: 0;
       }
     }
   }

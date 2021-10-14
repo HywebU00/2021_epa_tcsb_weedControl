@@ -672,9 +672,9 @@ $(function () {
   /*-----------------------------------*/
   $(window).bind("scroll", function () {
     if ($(this).scrollTop() > 200) {
-      $(".scrollToTop").fadeIn();
+      $(".scrollBtn").fadeIn();
     } else {
-      $(".scrollToTop").fadeOut();
+      $(".scrollBtn").fadeOut();
     }
   });
   /*-----------------------------------*/
