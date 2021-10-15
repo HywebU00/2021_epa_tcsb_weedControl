@@ -424,7 +424,11 @@
     height: 70vh !important;
   }
 }
-
+.skw-page__content > .page_btn {
+  &:hover {
+    color: $primaryColor;
+  }
+}
 .page_btn {
   padding: 16px 22px;
   border-radius: 50%;
@@ -774,7 +778,7 @@
   .menu_area {
     width: 100%;
     padding: 3em 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
