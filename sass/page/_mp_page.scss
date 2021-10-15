@@ -556,10 +556,6 @@
   }
 }
 .skw-page__menu {
-  // width: 350px;
-  // height: 100%;
-  // right: 0;
-  // position: absolute;
   nav {
     position: absolute;
     right: 0.5em;
@@ -603,10 +599,10 @@
     z-index: 999;
     flex-wrap: wrap;
 
-    @include screen("mobile") {
-      top: 66px;
-      right: 70px;
-    }
+    // @include screen("mobile") {
+    //   top: 66px;
+    //   right: 70px;
+    // }
     .form_grp {
       display: flex;
       width: 60%;
