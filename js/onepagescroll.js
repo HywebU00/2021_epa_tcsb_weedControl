@@ -42,9 +42,7 @@ $(document).ready(function () {
 
   $(document).on("mousewheel DOMMouseScroll resize", function (e) {
     pgWidth = $(window).width();
-    // console.log(pgWidth);
     if (pgWidth < 767 || pgWidth === 767) {
-      window.reload();
       return;
     }
     if (scrolling) return;
@@ -61,6 +59,12 @@ $(document).ready(function () {
       navigateUp();
     } else if (e.which === 40) {
       navigateDown();
+    }
+  });
+  $(window).on("resize", function (e) {
+    pgWidth = $(window).width();
+    if (pgWidth < 767 || pgWidth === 767) {
+      window.location.reload();
     }
   });
   //=====================

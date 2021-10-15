@@ -500,6 +500,7 @@
   }
   .skw-page__title {
     .skw-page__content {
+      // border: 2px solid red;
       z-index: 1;
       @include screen("tablet") {
         padding: 0;
@@ -551,10 +552,10 @@
   }
 }
 .skw-page__menu {
-  width: 350px;
-  height: 100%;
-  right: 0;
-  position: absolute;
+  // width: 350px;
+  // height: 100%;
+  // right: 0;
+  // position: absolute;
   nav {
     position: absolute;
     right: 0.5em;
@@ -669,13 +670,14 @@
   width: 350px;
   height: 100%;
   right: 0;
+  top: 0;
   position: absolute;
-  filter: drop-shadow(-20px 5px 20px #000000);
+  filter: drop-shadow(-20px 5px 20px rgba(0, 0, 0, 0.3));
   &::after {
     position: absolute;
     content: "";
     clip-path: polygon(80% 0, 100% 0, 100% 100%, 18% 100%);
-    background: $bg-color-deep;
+    background: $bg-color;
     width: 350px;
     height: 100%;
     right: 0;
@@ -941,7 +943,7 @@
   }
   p {
     margin: 1em 40px 0 40px;
-    color: $secondaryColor;
+    color: $primaryColor;
     line-height: 2em;
   }
   .Copyright {
