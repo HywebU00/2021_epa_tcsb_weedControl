@@ -192,8 +192,12 @@
         z-index: 2;
         display: none;
         background: $secondaryColor;
+        @media screen and (max-width: 600px) {
+          height: 150px;
+        }
         @include screen("mobile") {
           display: block;
+          right: 5%;
         }
       }
       @include screen("mobile") {

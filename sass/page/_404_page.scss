@@ -1,0 +1,45 @@
+.page404 {
+  display: flex;
+  align-items: center;
+  margin-top: 6em;
+  margin-bottom: 4em;
+  @include screen("mobile") {
+    display: block;
+  }
+  //   figure {
+  //     margin-top: 2em;
+  //   }
+}
+.bolck404 {
+  h2 {
+    color: $primaryColor;
+  }
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+.web404 {
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  h3 {
+    margin-top: 0.5em;
+  }
+  ul > li {
+    list-style-type: none;
+    margin-right: 1em;
+    a {
+      color: $primaryColor;
+    }
+  }
+  .input-group {
+    display: flex;
+    .btn {
+      background: $primaryColor;
+      color: #fff;
+    }
+  }
+}
