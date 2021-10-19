@@ -1,0 +1,157 @@
+.cp .info {
+  padding: 0;
+  margin: 1em 0;
+  li {
+    display: inline-block;
+    margin: 0 1em 0 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+.cp {
+  table {
+    margin: 0 auto 2em;
+    caption {
+      font-weight: bold;
+      text-align: left;
+      font-size: 1em;
+      padding: 5px 10px 4px;
+      display: none;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    td {
+      vertical-align: top;
+    }
+  }
+  .web_link {
+    h3 {
+      padding: 12px 0 0 0;
+      margin: 0;
+      border: 0;
+    }
+    li a {
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+  .video {
+    width: 640px;
+    @include screen("mobile") {
+      width: 100%;
+    }
+  }
+  .pic_right {
+    float: right;
+    margin: 0px 1em 0 1em;
+  }
+  .section_title {
+    margin-bottom: 1em;
+  }
+  .cpTb {
+    th {
+      width: 20%;
+    }
+  }
+
+  a {
+    color: $primaryColor;
+  }
+  .sub_title {
+    font-size: 1.3em;
+    color: darken($primaryColor, 10%);
+    padding-bottom: 0em;
+    margin-bottom: 0.5em;
+  }
+  h2.sub_title {
+    font-size: 1.5em;
+    color: darken($primaryColor, 10%);
+    padding-bottom: 0em;
+    margin-bottom: 0.5em;
+  }
+  .lightbox_slider_block {
+    h3 {
+      border: none;
+    }
+  }
+  h4,
+  h5,
+  h6 {
+    color: darken($primaryColor, 10%);
+  }
+  .download {
+    thead {
+      th {
+        &:first-child {
+          width: 50%;
+        }
+      }
+    }
+    .text-center {
+      text-align: center;
+    }
+  }
+  .article_ul {
+    margin: 0 0 1em 0px;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+}
+.font_size ul li {
+  a {
+    border-radius: 5px;
+  }
+  a.active {
+    background-color: darken($primaryColor, 10%);
+  }
+}
+.function_panel {
+  .function ul li a {
+    border-radius: 5px;
+  }
+  .share {
+    a.shareButton {
+      border-radius: 5px;
+    }
+  }
+}
+.slick-dots li.slick-active button {
+  &:before {
+    opacity: 1;
+    background: $primaryColor;
+  }
+}
+.slick-dots li button {
+  &:hover,
+  &::before,
+  &:focus {
+    background: lighten($primaryColor, 20%);
+  }
+}
+.slick-dots li button:focus:before {
+  background: lighten($primaryColor, 20%);
+}
+.slick-dots li button {
+  &:focus {
+    background: $primaryColor !important;
+  }
+}
+
+.publish_info {
+  justify-content: flex-end;
+  border: none;
+
+  li {
+    margin-bottom: 0;
+    flex: none;
+    padding: 0 1em;
+    border-left: 1px solid #ccc;
+    @media screen and (max-width:676px) {
+      width: 100%;
+      border: 0;
+    }
+  }
+
+}

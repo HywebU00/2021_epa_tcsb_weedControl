@@ -50,6 +50,9 @@
   .list > ul > li > a:hover {
     color: $primaryColor;
   }
+  .Flex-set{
+    justify-content: flex-start;
+  }
 }
 .listTb {
   margin-bottom: 2em;
@@ -73,6 +76,7 @@
 }
 .listPhoto {
   margin: 0 2em;
+  justify-content: flex-start;
   .caption {
     h2 {
       font-size: 1.2em;
@@ -84,6 +88,7 @@
   .thumbnail {
     border: 1px solid #8080806e;
     box-shadow: 0 0 3em -1.5em rgba(0, 0, 0, 0);
+    margin: 0 0.3em 1em 0.3em ;
     time {
       background: url(../images/img/icon_time.png) no-repeat center left;
       padding-left: 1.2em;
@@ -100,10 +105,10 @@
     }
   }
 }
-.listPhoto .thumbnail {
-  flex-basis: calc(100% / 12 * 4 - 20px);
-  max-width: calc(100% / 12 * 4 - 10px);
-}
+// .listPhoto .thumbnail {
+//   flex-basis: calc(100% / 12 * 4 - 20px);
+//   max-width: calc(100% / 12 * 4 - 10px);
+// }
 .center_block {
   .section_title {
     font-size: 1.625em;
