@@ -230,7 +230,6 @@ $(function () {
 
   //skw-page__searchContent 搜尋匡打開與關上
   $(".searchCtrl").click(function () {
-    console.log("123");
     $(".skw-page__searchContent").toggleClass("show");
   });
 });

@@ -1,9 +1,9 @@
 // 自行加入的JS請寫在這裡
 $(function () {
   // 首頁輪播
-  $(".mpSlider").slick({
+  $(".npSlider").slick({
     mobileFirst: true,
-    dots: true,
+    dots: false,
     arrows: true,
     infinite: true,
     speed: 500,
@@ -221,5 +221,16 @@ $(function () {
 $(".condition").click(function (e) {
   e.preventDefault();
   $(".condition_block").slideToggle();
-  // $(".condition_block").toggleClass("show_content");
+});
+
+//大事記 event
+$(function () {
+  $(".eventblock .event .content").css("display", "none");
+  $(".eventblock .event .topic>a").click(function () {
+    $(".eventblock .event .content").stop().slideUp();
+    $(this).parent(".topic").next(".content").stop().slideToggle();
+
+    $(".event .topic>a").removeClass("trunicon");
+    $(this).stop().toggleClass("trunicon");
+  });
 });
