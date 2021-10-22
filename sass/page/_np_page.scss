@@ -298,7 +298,7 @@ a:hover {
         font-size: 1.1em;
 
         span {
-          font-size: 5em;
+          font-size: 4em;
           font-family: 'EB Garamond', serif;
           font-weight: 200;
           margin-right: 0.1em;
@@ -313,12 +313,84 @@ a:hover {
 
     .col p {
       color: #000;
-      ;
+      margin-top: 0;
     }
   }
 
   .country_section {
     margin: 5em 0 2.5em 0;
+
+    .section_bar {
+      margin: 3em 0;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      margin-left: -3%;
+      #slider-bar {
+        width: 35%;
+        height: 13px;
+        background: $primaryColor;
+        z-index: 1;
+        border-radius: 10px;
+        margin-left: -6%;
+        .ui-slider-handle {
+          background: $secondaryColor;
+
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          margin-top: -8px;
+
+        }
+
+        .ui-slider-line {
+          display: none;
+        }
+
+        .ui-slider-label {
+          margin-top: 1em;
+          font-size: 1.2em;
+          color: #000;
+          white-space: nowrap;
+          margin-left: -10px;
+
+          &:hover {
+            color: $primaryColor;
+          }
+        }
+
+        .ui-slider-pip-selected .ui-slider-label {
+          color: $primaryColor;
+        }
+
+      }
+      .execute_text{
+        position: absolute;
+  
+    right: 16%;
+    bottom: -40px;
+
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 12px;
+        left: 30%;
+        border-radius: 10px;
+       
+        background: #ccc;
+      }
+    }
+
+    .year_content {
+      display: none;
+    }
+
+    .year_active {
+      display: block;
+    }
   }
 
   .country_content {
@@ -329,11 +401,24 @@ a:hover {
     }
 
     .col {
+      padding-top: 1em;
+
       div {
         background: rgba(238, 238, 238, 0.6);
-        padding: 2em;
+        padding: 1.8em;
         margin: 1em .2em;
         min-height: 300px;
+        height: 100%;
+      }
+      p.update_text{
+        margin-top: 2em;
+        font-size: 1.5em;
+          color: #d16060;
+          span{
+            font-family: 'EB Garamond', serif;
+            font-size: 1.8em;
+            line-height: 1em;
+          }
       }
     }
   }
@@ -422,6 +507,7 @@ a:hover {
     @extend .mpSlider;
     padding-bottom: 0;
     margin-top: 2em;
+
     .slick-next {
       right: 40%;
       background: url(../images/img/slider_btn_next.png) center no-repeat rgba(0, 0, 0, 0);
@@ -482,17 +568,22 @@ a:hover {
             h3 {
               font-size: 1em;
             }
+
             padding-right: 15%;
             padding-left: 10%;
           }
+
           @include screen("xs_mobile") {
-            h3,span {
+
+            h3,
+            span {
               font-size: 0.8em;
               line-height: 1.5em;
             }
-          h3{
-            margin-top: 0.3em;
-          }
+
+            h3 {
+              margin-top: 0.3em;
+            }
           }
         }
 
@@ -514,5 +605,7 @@ a:hover {
       margin-bottom: 3em;
     }
   }
+
+
 
 }
