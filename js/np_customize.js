@@ -241,33 +241,32 @@ $(function () {
 // set up an array to hold the months
 // var years = ["107", "108", "109", "110執行中"];
 var years = ["107", "108", "109"];
+
 $("#slider-bar")
   // activate the slider with options
   .slider({
     min: 0,
     max: years.length - 1,
-    // value: activeMonth,
   })
-
   // add pips with the labels set to "months"
   .slider("pips", {
     rest: "label",
     labels: years,
   })
-
   // and whenever the slider changes, lets echo out the month
   .on("slidechange", function (e, ui) {
-    // console.log(ui.value);
     let btnValue = ui.value;
     let content;
-
     $(".year_content").each(function (e) {
       let content = JSON.parse(this.dataset.content);
       if (content === btnValue) {
-        console.log($(this).addClass("year_active"));
+        $(this).addClass("year_active");
         $(this).siblings().removeClass("year_active");
+        $(".ui-slider-handle").html($(this).data("year"));
       } else {
         return;
       }
     });
   });
+//一開始預設 按鈕年份
+$(".ui-slider-handle").html($(".year_active").data("year"));

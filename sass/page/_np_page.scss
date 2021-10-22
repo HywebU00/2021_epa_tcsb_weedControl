@@ -327,6 +327,11 @@ a:hover {
       position: relative;
       width: 100%;
       margin-left: -3%;
+
+      @include screen("xs_mobile") {
+        margin-left: -10%;
+      }
+
       #slider-bar {
         width: 35%;
         height: 13px;
@@ -334,14 +339,25 @@ a:hover {
         z-index: 1;
         border-radius: 10px;
         margin-left: -6%;
+
+        @include screen("xs_mobile") {
+          width: 45%;
+        }
+        .ui-state-default{
+          color: rgba(0, 0, 0, 0);
+        }
+        .ui-state-focus ,.ui-state-hover {
+          border: 2px solid $aFocus;
+         
+        }
         .ui-slider-handle {
           background: $secondaryColor;
-
+          font-size: 0px;
           width: 36px;
           height: 36px;
           border-radius: 50%;
-          margin-top: -8px;
-
+          margin-top: -13px;
+          margin-left: -10px;
         }
 
         .ui-slider-line {
@@ -360,18 +376,27 @@ a:hover {
           }
         }
 
+        .ui-state-hover {
+          border: 2px solid $aFocus;
+        }
+
         .ui-slider-pip-selected .ui-slider-label {
           color: $primaryColor;
         }
 
       }
-      .execute_text{
-        position: absolute;
-  
-    right: 16%;
-    bottom: -40px;
 
+      .execute_text {
+        position: absolute;
+        right: 16%;
+        bottom: -40px;
+        font-weight: 500;
+
+        @include screen("xs_mobile") {
+          right: -5%;
+        }
       }
+
       &::after {
         content: '';
         position: absolute;
@@ -379,9 +404,13 @@ a:hover {
         height: 12px;
         left: 30%;
         border-radius: 10px;
-       
         background: #ccc;
+
+        @include screen("xs_mobile") {
+          width: 65%;
+        }
       }
+
     }
 
     .year_content {
@@ -410,15 +439,17 @@ a:hover {
         min-height: 300px;
         height: 100%;
       }
-      p.update_text{
+
+      p.update_text {
         margin-top: 2em;
         font-size: 1.5em;
-          color: #d16060;
-          span{
-            font-family: 'EB Garamond', serif;
-            font-size: 1.8em;
-            line-height: 1em;
-          }
+        color: #d16060;
+
+        span {
+          font-family: 'EB Garamond', serif;
+          font-size: 1.8em;
+          line-height: 1em;
+        }
       }
     }
   }
@@ -468,6 +499,12 @@ a:hover {
         font-weight: 400;
         margin-right: 10%;
         margin-left: 10%;
+      }
+      a:focus{
+        color: $secondaryColor;
+        &::before{
+          box-shadow: 0 0px 0px 2px $secondaryColor inset;
+        }
       }
     }
   }
