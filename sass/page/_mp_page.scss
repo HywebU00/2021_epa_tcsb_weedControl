@@ -425,7 +425,7 @@
   }
 }
 .skw-page__content > .page_btn {
-  &:hover {
+  &:hover{
     color: $primaryColor;
   }
 }
@@ -444,7 +444,8 @@
     transition: all 1s;
   }
   &:focus {
-    color: #fff;
+    color: $primaryColor;
+    background: #fff;
   }
   @include screen("mobile") {
     padding: 10px 15px;

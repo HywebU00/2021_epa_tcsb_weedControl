@@ -233,3 +233,25 @@ $(function () {
     $(".skw-page__searchContent").toggleClass("show");
   });
 });
+
+//===================================
+// sidebarCtrl  menu 打開後tab遊走設定
+//===================================
+$(function () {
+  //tab鍵 在menu間遊走
+  $(".sidebarCtrl").click(function () {
+    $(".sidebarClose").focus();
+  });
+  //關閉menu
+  $(".menu_area")
+    .find("li:last>a")
+    .focusout(function () {
+      $(".menu_area").hide();
+    });
+  //tab鍵 在搜尋鍵間遊走
+  $(".skw-page__search")
+    .find("li:last>a")
+    .focusout(function () {
+      $(".skw-page__search").hide();
+    });
+});

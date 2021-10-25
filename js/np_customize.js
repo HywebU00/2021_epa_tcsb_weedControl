@@ -235,38 +235,24 @@ $(function () {
   });
 });
 
-//slider-bar 設定
-
-// $("#slider-bar").slider().slider("pips");
-// set up an array to hold the months
-// var years = ["107", "108", "109", "110執行中"];
-var years = ["107", "108", "109"];
-
-$("#slider-bar")
-  // activate the slider with options
-  .slider({
-    min: 0,
-    max: years.length - 1,
-  })
-  // add pips with the labels set to "months"
-  .slider("pips", {
-    rest: "label",
-    labels: years,
-  })
-  // and whenever the slider changes, lets echo out the month
-  .on("slidechange", function (e, ui) {
-    let btnValue = ui.value;
-    let content;
-    $(".year_content").each(function (e) {
-      let content = JSON.parse(this.dataset.content);
-      if (content === btnValue) {
-        $(this).addClass("year_active");
-        $(this).siblings().removeClass("year_active");
-        $(".ui-slider-handle").html($(this).data("year"));
-      } else {
-        return;
-      }
-    });
+//===================================
+// sidebarCtrl  menu 打開後tab遊走設定
+//===================================
+$(function () {
+  //tab鍵 在menu間遊走
+  $(".sidebarCtrl").click(function () {
+    $(".sidebarClose").focus();
   });
-//一開始預設 按鈕年份
-$(".ui-slider-handle").html($(".year_active").data("year"));
+  //關閉menu
+  $(".menu_area")
+    .find("li:last>a")
+    .focusout(function () {
+      $(".menu_area").hide();
+    });
+  //tab鍵 在搜尋鍵間遊走
+  $(".skw-page__search")
+    .find("li:last>a")
+    .focusout(function () {
+      $(".skw-page__search").hide();
+    });
+});

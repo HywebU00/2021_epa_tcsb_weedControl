@@ -937,18 +937,18 @@ $(function () {
   /*------------------------------------*/
   /////gotoCenter on focus跳到 content/////
   /*------------------------------------*/
-  $("a.goCenter").keydown(function (e) {
-    if (e.which == 13) {
-      $("#aC").focus();
-      $("html, body")
-        .stop(true, true)
-        .animate(
-          { scrollTop: $(".main").find(".accesskey").offset().top },
-          800,
-          "easeOutExpo"
-        );
-    }
-  });
+  // $("a.goCenter").keydown(function (e) {
+  //   if (e.which == 13) {
+  //     $("#aC").focus();
+  //     $("html, body")
+  //       .stop(true, true)
+  //       .animate(
+  //         { scrollTop: $(".main").find(".accesskey").offset().top },
+  //         800,
+  //         "easeOutExpo"
+  //       );
+  //   }
+  // });
   /*-----------------------------------*/
   //////// 語言模組 無障礙遊走設定  ////////
   /*-----------------------------------*/
