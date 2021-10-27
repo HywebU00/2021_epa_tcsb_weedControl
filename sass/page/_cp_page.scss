@@ -1,6 +1,7 @@
 .cp .info {
   padding: 0;
   margin: 1em 0;
+
   li {
     display: inline-block;
     margin: 0 1em 0 0;
@@ -8,16 +9,20 @@
     list-style-type: none;
   }
 }
-.category .here{
-  background: linear-gradient(to bottom, #4236bb,#2d2580);
+
+.category .here {
+  background: linear-gradient(to bottom, #4236bb, #2d2580);
   border-radius: 4px;
-  a{
+
+  a {
     color: #fff;
   }
 }
+
 .cp {
   table {
     margin: 0 auto 2em;
+
     caption {
       font-weight: bold;
       text-align: left;
@@ -25,39 +30,47 @@
       padding: 5px 10px 4px;
       display: none;
     }
+
     p {
       margin-bottom: 0;
     }
+
     td {
       vertical-align: top;
     }
   }
-  
+
   .web_link {
     h3 {
       padding: 12px 0 0 0;
       margin: 0;
       border: 0;
     }
+
     li a {
       &:hover {
         color: $primaryColor;
       }
     }
   }
+
   .video {
     width: 640px;
+
     @include screen("mobile") {
       width: 100%;
     }
   }
+
   .pic_right {
     float: right;
     margin: 0px 1em 0 1em;
   }
+
   .section_title {
     margin-bottom: 1em;
   }
+
   .cpTb {
     th {
       width: 20%;
@@ -67,28 +80,33 @@
   a {
     color: $primaryColor;
   }
+
   .sub_title {
     font-size: 1.3em;
     color: darken($primaryColor, 10%);
     padding-bottom: 0em;
     margin-bottom: 0.5em;
   }
+
   h2.sub_title {
     font-size: 1.5em;
     color: darken($primaryColor, 10%);
     padding-bottom: 0em;
     margin-bottom: 0.5em;
   }
+
   .lightbox_slider_block {
     h3 {
       border: none;
     }
   }
+
   h4,
   h5,
   h6 {
     color: darken($primaryColor, 10%);
   }
+
   .download {
     thead {
       th {
@@ -97,50 +115,61 @@
         }
       }
     }
+
     .text-center {
       text-align: center;
     }
   }
+
   .article_ul {
     margin: 0 0 1em 0px;
     padding: 0 20px;
     overflow: hidden;
   }
 }
+
 .font_size ul li {
   a {
     border-radius: 5px;
   }
+
   a.active {
     background-color: darken($primaryColor, 10%);
   }
 }
+
 .function_panel {
   .function ul li a {
     border-radius: 5px;
   }
+
   .share {
     a.shareButton {
       border-radius: 5px;
     }
   }
 }
+
 .slick-dots li.slick-active button {
   &:before {
     opacity: 1;
     background: $primaryColor;
   }
 }
+
 .slick-dots li button {
+
   &:hover,
   &::before,
   &:focus {
     background: lighten($primaryColor, 20%);
   }
 }
+
 .slick-dots li button:focus:before {
   background: lighten($primaryColor, 20%);
 }
+
 .slick-dots li button {
   &:focus {
     background: $primaryColor !important;
@@ -148,18 +177,94 @@
 }
 
 .publish_info {
-  justify-content: flex-end;
+  justify-content: space-between;
   border: none;
+  margin-bottom: 1em;
 
-  li {
+  &::before {
+    content: none;
+  }
+
+  &::after {
+    content: none;
+  }
+
+  .data {
+    ul {
+      display: flex;
+
+    }
+
+  }
+
+  .share2 {
+    display: flex;
+    align-items: center;
+
+    ul {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      padding-left: 1em;
+
+      li {
+        list-style: none;
+        margin-bottom: 0;
+        height: 35px;
+
+        a {
+          display: inline-block;
+          margin-bottom: 0;
+          margin-right: 0.5em;
+          height: 35px;
+          border-radius: 4px;
+        }
+
+        img {
+          height: 35px;
+          width: 35px;
+        }
+        .fb{
+          background: #3b5997;
+        }
+        .google{
+          background: #df2f2f;
+        }
+        .twitter{
+          background:#55acec;
+        }
+        .line{
+          background: #00c214;
+        }
+        .forward{
+          background: #87cd27;
+        }
+        .print{
+          background: #5c64b5;
+        }
+      }
+    }
+  }
+
+  .data {
+    align-items: center;
+    display: flex;
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
+  .data li {
+    list-style: none;
     margin-bottom: 0;
+
     flex: none;
     padding: 0 1em;
     border-left: 1px solid #ccc;
-    @media screen and (max-width:676px) {
-      width: 100%;
-      border: 0;
-    }
+    // @media screen and (max-width:676px) {
+    //   width: 100%;
+    //   border: 0;
+    // }
   }
 
 }

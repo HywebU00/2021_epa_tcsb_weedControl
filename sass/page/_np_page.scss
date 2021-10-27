@@ -104,7 +104,14 @@
   line-height: 1.8em;
   border-radius: 5px;
 }
-
+.np{
+  .sub_menu{
+    ul li a{
+      background: url(../images/img/icon_nav.png) no-repeat ;
+      background-position: 10px 20px;
+    }
+  }
+}
 .fatfooter {
   background: $color-green;
 
@@ -122,6 +129,9 @@
 
 footer {
   background-color: $color-green;
+  a{
+    display: inline-block;
+  }
 }
 
 a:hover {

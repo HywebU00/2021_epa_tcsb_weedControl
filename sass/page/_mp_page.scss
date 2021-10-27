@@ -31,7 +31,7 @@
     color: #fff;
     line-height: 2em;
     display: block;
-
+    cursor: unset;
     &:focus {
       box-shadow: 0 0px 0px 2px $form-focus inset;
     }
@@ -901,10 +901,8 @@
     top: 0;
     left: 0;
     height: 100vh;
-    // opacity: 0;
-    // display: none;
-    opacity: 1;
-    display: block;
+    opacity: 0;
+    display: none;
     background: $color-green;
     overflow: hidden;
     overflow-y: auto;
@@ -945,10 +943,13 @@
         font-size: 1.8em;
         padding: 0.5em 0;
         display: inline-block;
-
+       
         +ul {
           display: flex;
         }
+      }
+      a:hover,a:focus,a:active{
+        color: $primaryColor;
       }
 
       ul {
