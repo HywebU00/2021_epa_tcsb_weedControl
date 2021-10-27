@@ -21,9 +21,10 @@ $color-hr: #666; //hr顏色
 $color-word: #222; //一般字的顏色
 $btn-word: #222; //按鈕字的顏色
 // 連結顏色
+$color-info: #039389;
 $aColor: $primaryColor;// #0066cc;
 $aHover:  $primaryColor;// #0066cc;//darken($aColor, 20);
-$aFocus: #ff3e4d; //$primaryColor; 
+$aFocus: #14e6d8;//#ff3e4d; //$primaryColor; 
 // 表單focus顏色
 $form-focus:  #ff3e4d;//darken($primaryColor,20) ;//#0066cc; //表單
 $form-btn: $primaryColor;//#0066cc; //表單

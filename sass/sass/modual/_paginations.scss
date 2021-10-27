@@ -48,7 +48,8 @@
                 a {
                     color: #fff !important;
                     background: $form-focus;
-                    border: darken($form-focus, 5) solid 1px;
+                    border: $color-info solid 1px
+                    // border: darken($form-focus, 5) solid 1px;
                 }
             }
             %arrow {

@@ -1125,6 +1125,9 @@ p{
         @include screen('mobile') {
           justify-content: center;
         }
+        a {
+          display: inline-block;
+        }
       }
       .footer_icon {
         a {

@@ -31,6 +31,7 @@ $btn-radius:.2em;
         cursor: pointer;
         color: #FFF;
         outline:none;
+    
         box-shadow: 0 0px 0px 2px $aFocus !important;
         // @include gradient(lighten($btn-bg, 10), darken($btn-bg, 18), vertical);
     }
