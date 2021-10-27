@@ -59,6 +59,14 @@
   .list>ul>li>a:hover {
     color: $primaryColor;
   }
+  .category .here{
+    
+    background: linear-gradient(to bottom, #4236bb,#2d2580);
+    border-radius: 4px;
+    a{
+      color: #fff;
+    }
+  }
 
   .Flex-set {
     justify-content: flex-start;

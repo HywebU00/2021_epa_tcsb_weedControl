@@ -142,7 +142,7 @@ a:hover {
     }
 
     p {
-      color: $primaryColor;
+      color: #000;
     }
 
     .Copyright {
@@ -213,6 +213,10 @@ a:hover {
         background: none;
         padding: 0;
         margin-left: 1.5em;
+        &:hover{
+          color: $primaryColor;
+          text-decoration: underline;
+        }
       }
 
       @include screen("mobile") {

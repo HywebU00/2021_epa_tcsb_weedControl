@@ -40,29 +40,38 @@ $(document).ready(function () {
   }
   // 換頁後找到第一個 ａ 連結按鈕;
 
-  function focusFn() {
-    setTimeout(function () {
-      $(pgPrefix + curPage)
+  function focusFn(picIdx) {
+    let PgbtnIdx = picIdx + 1;
+
+    $(pgBtn + picIdx).focusout(function (e) {
+      $(pgPrefix + picIdx)
         .find("a")
         .first()
         .focus();
-      focusOutFn(curPage);
-    }, 500);
+    });
+    focusOutFn(PgbtnIdx);
   }
-  //  跳開連結 更換下一頁面
+  //  跳開a連結 更換下一個按鈕
   function focusOutFn(num) {
     $(pgPrefix + curPage)
       .find("a:last")
       .focusout(function () {
         let btnlen = $(".fullpage_btn").length;
         //找到目前選擇的頁面編號
-        let nextNum = num + 1;
-        $(".skw-btn-" + nextNum).focus();
-        if (nextNum > btnlen) {
-          $(".skw-btn-1").click();
+        $(".skw-btn-" + num).focus();
+        if (num === btnlen) {
+          lastBtnChangePage(num);
         }
       });
   }
+  // { focus }如果是最後一頁  按鈕 找到a連結後 重新整理
+  $(".skw-page-5 .page_btn").focusout(function () {
+    document.location.reload();
+  });
+
+  $("#modal1 .page_btn").focusout(function () {
+    $(".skw-btn-2").focus();
+  });
 
   $(document).on("mousewheel DOMMouseScroll resize", function (e) {
     pgWidth = $(window).width();
@@ -94,40 +103,38 @@ $(document).ready(function () {
   //=====================
   // 按鈕列控制 setting
   //=====================
-  $(".fullpage_btn").on("click", function () {
-    var clickBtn = $(this).data("page");
-    //點擊按鈕改變按鈕樣式 除了自己以外移除狀態
-    $(this).addClass("fullpage_btn-active");
-    $(this).siblings().removeClass("fullpage_btn-active");
-    //獲取字串最後一個值
-    var picIdx = JSON.parse(clickBtn.split("")[clickBtn.split("").length - 1]);
-    $(".skw-page").removeClass("active");
-    // $(pgPrefix + (picIdx - 1)).addClass("inactive");
-    // $(pgPrefix + (picIdx + 1)).removeClass("active");
-    $("." + clickBtn).addClass("active ");
-    $("." + clickBtn).removeClass("inactive");
-    $(pgPrefix + (clickBtn - 1)).addClass("inactive");
-    $(pgPrefix + (clickBtn + 1)).removeClass("active");
-    curPage = picIdx;
-  });
 
+  function changePage() {
+    $(".fullpage_btn").on("keyup", function (e) {
+      if (e.keyCode === 9) {
+        var clickBtn = $(this).data("page");
+        //獲取字串最後一個值
+        var picIdx = JSON.parse(
+          clickBtn.split("")[clickBtn.split("").length - 1]
+        );
+        $(".skw-page").removeClass("active");
+        $("." + clickBtn).addClass("active");
+        $("." + clickBtn).removeClass("inactive");
+        $(pgPrefix + (clickBtn - 1)).addClass("inactive");
+        $(pgPrefix + (clickBtn + 1)).removeClass("active");
+        curPage = picIdx;
+
+        //控制頁面更換後focus
+        focusFn(picIdx);
+      }
+    });
+  }
   //=====================
   // 按鈕列控制 setting
   //=====================
 
   $(".fullpage_btn").on("focus", function () {
     var clickBtn = $(this).data("page");
+
     //點擊按鈕改變按鈕樣式 除了自己以外移除狀態
     $(this).addClass("fullpage_btn-active");
     $(this).siblings().removeClass("fullpage_btn-active");
-    //獲取字串最後一個值
-    var picIdx = JSON.parse(clickBtn.split("")[clickBtn.split("").length - 1]);
-    $(".skw-page").removeClass("active");
-    $(".skw-page").addClass("inactive");
-    $("." + clickBtn).addClass("active");
-    $("." + clickBtn).removeClass("inactive");
-    curPage = picIdx;
-    focusFn();
+    changePage();
   });
   //=====================
   // slider setting
