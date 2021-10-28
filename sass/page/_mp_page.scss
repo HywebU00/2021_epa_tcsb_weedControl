@@ -33,7 +33,7 @@
     display: block;
     cursor: unset;
     &:focus {
-      box-shadow: 0 0px 0px 2px $form-focus inset;
+      box-shadow: 0 0px 0px 2px $aFocus inset;
     }
   }
 
