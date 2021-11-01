@@ -470,6 +470,8 @@
 .wrapp {
   img {
     height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
   .wrapp-item {
@@ -478,17 +480,17 @@
     background-position: bottom left;
   }
 
-  .wrapp-item-1 {
-    background-image: url(../images/img/banner_01.jpg);
-  }
+  // .wrapp-item-1 {
+  //   background-image: url(../images/img/banner_01.jpg);
+  // }
 
-  .wrapp-item-2 {
-    background-image: url(../images/img/banner_02.jpg);
-  }
+  // .wrapp-item-2 {
+  //   background-image: url(../images/img/banner_02.jpg);
+  // }
 
-  .wrapp-item-3 {
-    background-image: url(../images/img/banner_03.jpg);
-  }
+  // .wrapp-item-3 {
+  //   background-image: url(../images/img/banner_03.jpg);
+  // }
 
   @include screen("mobile") {
     height: 70vh !important;
