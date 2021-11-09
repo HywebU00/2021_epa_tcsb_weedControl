@@ -337,7 +337,7 @@ a:hover {
   }
 
   .country_section {
-    margin: 5em 0 2.5em 0;
+    margin: 5em 0 5em 0;
 
     .section_bar {
       margin: 3em 0;
@@ -674,4 +674,69 @@ a:hover {
 
 
 
+}
+
+.file_section {
+  margin-bottom: 5em;
+}
+
+.years_section {
+  margin-bottom: 5em;
+}
+
+.years_section .years_list {
+  ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin: 3em  3em 0 3em;
+    }
+
+    .page_btn {
+      color: $primaryColor;
+      text-align: center;
+      background-color: $color-green;
+      padding: 30px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      transition:  all 0.5s;
+      span:first-child {
+        line-height: normal;
+        font-size: 3em;
+        width: 100%;
+        font-weight: 400;
+        font-family: 'EB Garamond', serif;
+      }
+
+      &:hover{
+        background-color: $primaryColor;
+        transition:  all 0.5s;
+        color: #fff;
+      }
+    }
+  }
+  @include screen("mobile") {
+    ul{
+      display: block;
+    }
+    ul li{
+      width: 150px;
+      height: 150px;
+      margin: 2em auto;
+
+    }
+  }
+}
+
+.file_section {
+  +.publish_info {
+    ul {
+      margin-top: 0;
+    }
+  }
 }

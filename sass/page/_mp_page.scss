@@ -675,7 +675,8 @@
 
   .sidebarCtrl {
     background-image: url(../images/img/menu_icon.png);
-
+    font-size: 0em;
+    color:rgba(255, 255, 255, 0);
     &::after {
       content: "";
       position: absolute;
@@ -689,6 +690,8 @@
 
   .searchCtrl {
     background-image: url(../images/img/search_icon.png);
+    font-size: 0em;
+    color:rgba(255, 255, 255, 0);
   }
 }
 
@@ -696,8 +699,8 @@
   display: none;
 
   .skw-page__search {
-    width: 360px;
-    height: 90px;
+    width: 408px;
+    height: 100px;
     padding: 1em 0.3em 0em;
     background: #00000080;
     border-radius: 5px;
@@ -922,7 +925,7 @@
       position: absolute;
       right: 50px;
       top: 50px;
-
+      font-size: 0em;
       @include screen("mobile") {
         right: 30px;
         top: 20px;
