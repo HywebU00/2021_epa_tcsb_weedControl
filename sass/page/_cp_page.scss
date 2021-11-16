@@ -192,7 +192,9 @@
   .data {
     ul {
       display: flex;
-
+      li{
+        font-size: 1.1428em;
+      }
     }
 
   }
@@ -200,7 +202,9 @@
   .share2 {
     display: flex;
     align-items: center;
-
+    span{
+      font-size: 1.1428em;
+    }
     ul {
       display: flex;
       align-items: center;
@@ -251,6 +255,14 @@
     display: flex;
     ul {
       margin-bottom: 0;
+      @include screen('mobile'){
+      display: block;
+      padding: 0;
+      }
+       @media screen and (max-width:540px) {
+      margin-top: 1em;
+    }
+   
     }
   }
 
@@ -261,6 +273,7 @@
     flex: none;
     padding: 0 1em;
     border-left: 1px solid #ccc;
+    
     // @media screen and (max-width:676px) {
     //   width: 100%;
     //   border: 0;

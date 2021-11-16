@@ -56,8 +56,10 @@
                 span.dept {
                     display: inline-block;
                     font-size: .938em;
+                    margin:0 0.6em;
                     @include screen("mobile") {
                         display: block;
+                        margin:0;
                     }
                 }
                 time {

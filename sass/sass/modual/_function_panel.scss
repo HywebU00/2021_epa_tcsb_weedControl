@@ -114,6 +114,9 @@ div.function{
     .font_size{
         padding: 0;
         flex: initial;
+        span{
+            font-size: 1em;
+        }
     }
     .function {
         height: 32px;

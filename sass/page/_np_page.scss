@@ -157,6 +157,7 @@ a:hover {
 
     p {
       color: #000;
+      font-size: 1.23em;
     }
 
     .Copyright {
@@ -184,6 +185,7 @@ a:hover {
       white-space: nowrap;
       text-align: end;
       margin-bottom: 0;
+      font-size: 1.23em;
 
       span {
         &:last-child {
@@ -227,7 +229,7 @@ a:hover {
         background: none;
         padding: 0;
         margin-left: 1.5em;
-
+        font-size: 1.23em;
         &:hover {
           color: $primaryColor;
           text-decoration: underline;
