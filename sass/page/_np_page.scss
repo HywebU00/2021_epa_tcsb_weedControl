@@ -445,8 +445,9 @@ a:hover {
       .execute_text {
         position: absolute;
         right: 16%;
-        bottom: -40px;
+        bottom: -30px;
         font-weight: 500;
+        margin-bottom: 0em;
 
         @include screen("xs_mobile") {
           right: -5%;
