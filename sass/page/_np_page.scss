@@ -426,7 +426,7 @@ a:hover {
           color: #000;
           white-space: nowrap;
           margin-left: -10px;
-
+          font-weight: 500 !important;
           &:hover {
             color: $primaryColor;
           }
@@ -438,6 +438,7 @@ a:hover {
 
         .ui-slider-pip-selected .ui-slider-label {
           color: $primaryColor;
+          font-weight: 700 !important;
         }
 
       }
