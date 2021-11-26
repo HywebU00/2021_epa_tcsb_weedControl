@@ -70,21 +70,25 @@ h2.title {
   position: relative;
   z-index: 2;
   margin-top: -2em;
-  @include screen("mobile"){
+
+  @include screen("mobile") {
     font-size: 2.5em;
   }
 }
+
 .breadcrumb {
   border-bottom: 0;
   color: #fff;
   margin-top: -1em;
   margin-bottom: 3em;
+
   a {
     color: #fff;
     position: relative;
     z-index: 2;
   }
-  ul li:before{
+
+  ul li:before {
     color: #fff;
     position: relative;
     z-index: 2;
@@ -134,9 +138,57 @@ h2.title {
 
 .np {
   .sub_menu {
+
+    //修改新增
+    ul {
+      justify-content: center;
+    }
+
+    li {
+      flex: unset;
+      width: 23%;
+      margin: 1%;
+
+      // margin: 10px;
+      @include screen("tablet") {
+        width: 48%;
+      }
+
+      @include screen("mobile") {
+        width: 98%;
+
+      }
+    }
+
+    //修改新增
     ul li a {
-      background: url(../images/img/icon_nav.png) no-repeat;
+      // background: url(../images/img/icon_nav.png) no-repeat;
       background-position: 10px 20px;
+      //修改新增
+      // width: 180px;
+      // height: 180px;
+      // border-radius: 50%;
+      min-height: 100px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1em;
+      font-weight: 500;
+      // border: $primaryColor 1px solid;
+      // color: $primaryColor;
+      text-align: center;
+      transition: all 1s;
+
+      @include screen("mobile") {
+        min-height: unset;
+      }
+
+      // &:hover{
+      //   background-color: $primaryColor;
+      //   color: #fff;
+      // }
+      //修改新增
     }
   }
 }
@@ -257,6 +309,7 @@ a:hover {
         padding: 0;
         margin-left: 1.5em;
         font-size: 1.23em;
+
         &:hover {
           color: $primaryColor;
           text-decoration: underline;
@@ -292,6 +345,7 @@ a:hover {
 .innerpage>.container {
   margin-bottom: 2em;
 }
+
 // .np_content>
 .center_block {
   .center_title {
@@ -305,6 +359,9 @@ a:hover {
       border-bottom: 0;
       margin-bottom: 0;
       color: #000;
+      @include screen("xs_mobile") {
+        line-height: 1em;
+      }
     }
 
     p {
@@ -333,6 +390,21 @@ a:hover {
 
   }
 
+  .results_section_content {
+    max-width: 960px;
+    margin: 0 auto;
+
+    .results_content {
+      margin: 1em 3em;
+
+      .col h3 {
+        span {
+          font-size: 3.2em;
+        }
+      }
+    }
+  }
+
   .results_content {
     margin: 3em 0;
 
@@ -346,7 +418,7 @@ a:hover {
         font-size: 1.1em;
 
         span {
-          font-size: 4em;
+          font-size: 3.5em;
           font-family: 'EB Garamond', serif;
           font-weight: 200;
           margin-right: 0.1em;
@@ -356,12 +428,13 @@ a:hover {
 
     .col h4 {
       color: #000;
-      ;
+      margin-bottom: 0;
     }
 
     .col p {
       color: #000;
-      margin-top: 0;
+      margin: 0;
+      width: 100%;
     }
   }
 
@@ -381,15 +454,20 @@ a:hover {
       }
 
       #slider-bar {
-        width: 35%;
+        // width: 35%;
+        width: 40%;
         height: 13px;
         background: $primaryColor;
         z-index: 1;
         border-radius: 10px;
         margin-left: -6%;
-
+        @include screen("mobile") {
+          margin-left: -14%;
+        }
         @include screen("xs_mobile") {
-          width: 45%;
+          // width: 45%;
+          margin-left: -6%;
+          width: 55%;
         }
 
         .ui-state-default {
@@ -427,6 +505,7 @@ a:hover {
           white-space: nowrap;
           margin-left: -10px;
           font-weight: 500 !important;
+
           &:hover {
             color: $primaryColor;
           }
@@ -476,12 +555,74 @@ a:hover {
     }
 
     .year_active {
-      display: block;
+      // display: block;
+      display: flex;
+      align-items: center;
+
+      figure {
+        width: 60%;
+      }
+
+      section {
+        width: 40%;
+      }
+
+      section .container .country_content {
+        margin: 0;
+
+        .col {
+          width: 100%;
+
+          .country_content_title {
+            height: auto;
+            display: flex;
+            margin: 0;
+            justify-content: center;
+            align-items: flex-end;
+            width: 100%;
+            background-color: unset;
+            padding: 0;
+
+          }
+
+          h3 {
+            margin-right: 0.8em;
+          }
+
+          h4 {
+            // margin-right: 0.5em;
+            margin-top: 0;
+            // min-width: 100px;
+          }
+
+          @include screen("tablet") {
+            width: 70%;
+          }
+        }
+
+        @include screen("tablet") {
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      @include screen("tablet") {
+        display: block;
+
+        figure {
+          width: 100%;
+        }
+
+        section {
+          display: flex;
+          width: 100%;
+        }
+      }
     }
   }
 
   .country_content {
-    margin: 0em 12em 3em 12em;
+    // margin: 0em 12em 3em 12em;
 
     @include screen("mobile") {
       margin: 3em 3em;
@@ -492,16 +633,28 @@ a:hover {
 
       div {
         background: rgba(238, 238, 238, 0.6);
-        padding: 1.8em;
+        padding: 1em;
         margin: 1em .2em;
-        min-height: 300px;
+        // min-height: 300px;
         height: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        h3 {
+          // min-width: 150px;
+          // display: block;
+          margin: 0;
+          // min-width: 110px;
+        }
       }
 
       p.update_text {
-        margin-top: 2em;
-        font-size: 1.5em;
+        // margin-top: 1em;
+        width: 100%;
+        font-size: 1.2em;
         color: #d16060;
+        margin: 0;
 
         span {
           font-family: 'EB Garamond', serif;
@@ -720,22 +873,27 @@ a:hover {
     display: flex;
     justify-content: center;
     padding: 0;
+    flex-wrap: wrap;
+    margin: 0 auto;
 
     li {
       list-style: none;
-      margin: 3em  3em 0 3em;
+      margin: 3em 1.5em 0 1.5em;
     }
 
     .page_btn {
       color: $primaryColor;
       text-align: center;
       background-color: $color-green;
-      padding: 30px 20px;
+      padding: 30px 30px;
+      height: 150px;
+      width: 150px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      transition:  all 0.5s;
+      transition: all 0.5s;
+
       span:first-child {
         line-height: normal;
         font-size: 3em;
@@ -744,18 +902,20 @@ a:hover {
         font-family: 'EB Garamond', serif;
       }
 
-      &:hover{
+      &:hover {
         background-color: $primaryColor;
-        transition:  all 0.5s;
+        transition: all 0.5s;
         color: #fff;
       }
     }
   }
+
   @include screen("mobile") {
-    ul{
+    ul {
       display: block;
     }
-    ul li{
+
+    ul li {
       width: 150px;
       height: 150px;
       margin: 2em auto;

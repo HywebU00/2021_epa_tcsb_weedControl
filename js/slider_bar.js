@@ -2,7 +2,7 @@
 //slider-bar 設定
 //==================
 // set up an array to hold the months
-var years = ["107", "108", "109"];
+var years = ["107", "108", "109", "110"];
 
 if ($("#slider-bar") !== null) {
 }
