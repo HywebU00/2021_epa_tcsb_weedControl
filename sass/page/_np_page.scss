@@ -403,14 +403,19 @@ a:hover {
       background: rgba(0, 0, 0, 0);
       text-align: center;
 
-      h3 {
+      .results_num{
         font-size: 1.1em;
-
+        margin-bottom: 0.5em;
+        color: #000;
         span {
-          font-size: 3.5em;
+          font-size: 1.5em;
           font-family: 'EB Garamond', serif;
           font-weight: 200;
           margin-right: 0.1em;
+        }
+        + div{
+          color: #000;
+          font-weight: 500;
         }
       }
     }
@@ -424,6 +429,38 @@ a:hover {
       color: #000;
       margin: 0;
       width: 100%;
+    }
+    p{
+     display: flex;
+     align-items: flex-start;
+      .apply{
+        padding-right: 1px;
+        // line-height: 1em;
+     i{
+      background: #15751c;
+      
+     }
+     +span{
+      line-height: 1.45em;
+      margin-left: 0.5em;
+      text-align: left;
+    }
+      }
+      .not_apply{
+        padding-right: 1px;
+     i{
+      background: #d8a448;
+     }+span{
+      line-height: 1.45em;
+      margin-left: 0.5em;
+      text-align: left;
+    }
+      }
+      span i{
+        width: 20px;
+        height: 20px;     
+        display:inline-block;
+       }
     }
   }
 
@@ -571,8 +608,12 @@ a:hover {
             width: 100%;
             background-color: unset;
             padding: 0;
-
+            +p{
+              justify-content: center;
+              line-height: 2em;
+            }
           }
+         
 
           h3 {
             margin-right: 0.8em;
