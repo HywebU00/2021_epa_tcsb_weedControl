@@ -71,6 +71,7 @@
       display: block;
       color: #fff;
       bottom: 2em;
+      left: 0em;
       font-weight: 200;
       writing-mode: vertical-rl;
       font-size: 0.85em;
@@ -106,6 +107,7 @@
           color: gray;
           font-size: 0.45em;
           line-height: 1.13em;
+          white-space: nowrap;
 
           &:last-child {
             color: darken(gray, 50%);
