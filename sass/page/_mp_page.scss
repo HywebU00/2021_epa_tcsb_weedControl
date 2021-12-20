@@ -6,7 +6,15 @@
   height: 100vh;
   // background: $secondaryColor;
 }
-
+#mp_page,.skw-wrapper{
+  height: 100vh;
+  
+}
+@media screen and (max-width: 768px){
+  #mp_page,.skw-wrapper{
+      height: auto;
+    }
+}
 .page_section {
   position: absolute;
   bottom: 10%;

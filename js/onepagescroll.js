@@ -327,23 +327,20 @@ $(document).ready(function () {
         padding: "0% 30% 0% 30%",
       });
     }
-    if (w === 1240 && h === 1336) {
+    if ((w == 1023 && h <= 1367) || h >= 3164) {
+      console.log("2");
       $(".skw-page__half--left .skw-page__content").css({
-        // "background-color": "#222",
         padding: "0% 50% 0% 20%",
       });
       $(".skw-page__half--right .skw-page__content").css({
-        // "background-color": "#222",
         padding: "0% 20% 0% 50%",
       });
     }
-    if (w === 834 && h < 1111) {
+    if (w >= 833 && w <= 837 && h <= 1111) {
       $(".skw-page__half--left .skw-page__content").css({
-        // "background-color": "red",
         padding: " 0% 40% 0% 20%",
       });
       $(".skw-page__half--right .skw-page__content").css({
-        // "background-color": "red",
         padding: " 0% 20% 0% 40%",
       });
     }
