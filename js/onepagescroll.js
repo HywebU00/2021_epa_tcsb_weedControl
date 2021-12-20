@@ -8,7 +8,7 @@ $(document).ready(function () {
 
   //螢幕寬度
   var pgWidth = $(window).width();
-  // console.log(pgWidth);
+
   function pagination() {
     scrolling = true;
     $(pgPrefix + curPage)
@@ -75,6 +75,8 @@ $(document).ready(function () {
 
   $(document).on("mousewheel DOMMouseScroll resize", function (e) {
     pgWidth = $(window).width();
+
+    $(".widthsize").html(pgWidth);
     if (pgWidth < 767 || pgWidth === 767) {
       return;
     }
@@ -136,16 +138,22 @@ $(document).ready(function () {
     $(this).siblings().removeClass("fullpage_btn-active");
     changePage();
   });
+
   //=====================
   // slider setting
   //=====================
 
-  var h = $(window).height(),
-    wrap = $(".wrapp"),
-    image = wrap.find(".wrapp-item"),
-    len = image.length,
-    i = 0,
-    seconds = 5000;
+  var h = "100vh"; //$(window).height(),
+  (wrap = $(".wrapp")),
+    (image = wrap.find(".wrapp-item")),
+    (len = image.length),
+    (i = 0),
+    (seconds = 5000);
+
+  /* Set the matchMedia */
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    h = "70vh";
+  }
   /*
   ==================================
   Screnn resize and change height 
@@ -158,7 +166,7 @@ $(document).ready(function () {
   /* Resize screen event */
   $(window).resize(function () {
     /* change value on resize */
-    h = $(window).height();
+    var h = "100vh"; //$(window).height(),
     wrap.css({
       height: h,
     });
@@ -173,9 +181,6 @@ $(document).ready(function () {
       visibility: "visible",
       opacity: 1,
     });
-    // image.children("img").css({ opacity: 0, visibility: "hidden" });
-    // image.eq(i).children("img").css({ opacity: 1, visibility: "visible" });
-    // txt.text(image.eq(i).attr("alt"));
   }
   /* Show the first image on load */
   items_to_display(i);
@@ -196,83 +201,158 @@ $(document).ready(function () {
     }, seconds);
   }
   myTimer(); /* init timer */
+
+  //=====================
+  // 手機版本滑動測試  setting
+  //=====================
+
+  //獲取手機版本手勢
+  var startx, starty;
+  //獲得角度
+  function getAngle(angx, angy) {
+    return (Math.atan2(angy, angx) * 180) / Math.PI;
+  }
+
+  //根據起點終點返回方向 1向上 2向下 3向左 4向右 0未滑動
+  function getDirection(startx, starty, endx, endy) {
+    var angx = endx - startx;
+    var angy = endy - starty;
+    var result = 0;
+
+    //如果滑動距離太短
+    if (Math.abs(angx) < 2 && Math.abs(angy) < 2) {
+      return result;
+    }
+
+    var angle = getAngle(angx, angy);
+    if (angle >= -135 && angle <= -45) {
+      result = 1;
+    } else if (angle > 45 && angle < 135) {
+      result = 2;
+    } else if (
+      (angle >= 135 && angle <= 180) ||
+      (angle >= -180 && angle < -135)
+    ) {
+      result = 3;
+    } else if (angle >= -45 && angle <= 45) {
+      result = 4;
+    }
+
+    return result;
+  }
+  //手指接觸螢幕
+  document.addEventListener(
+    "touchstart",
+    function (e) {
+      startx = e.touches[0].pageX;
+      starty = e.touches[0].pageY;
+    },
+    false
+  );
+  //手指離開螢幕
+  document.addEventListener(
+    "touchend",
+    function (e) {
+      var endx, endy;
+      var pgWidth = $(window).width();
+      endx = e.changedTouches[0].pageX;
+      endy = e.changedTouches[0].pageY;
+      var direction = getDirection(startx, starty, endx, endy);
+      switch (direction) {
+        case 0:
+          // alert("未滑動！");
+          break;
+        case 1:
+          // alert("向上！");
+          if (pgWidth < 767 || pgWidth === 767) {
+            return;
+          } else {
+            navigateUp();
+          }
+          break;
+        case 2:
+          if (pgWidth < 767 || pgWidth === 767) {
+            return;
+          } else {
+            navigateDown();
+          }
+          // alert("向下！");
+          break;
+        case 3:
+          // alert("向左！")
+          break;
+        case 4:
+          // alert("向右！")
+          break;
+        default:
+      }
+    },
+    false
+  );
+
+  //響應式斷點  ipad pro（1024*1366）
+  function ipadproSize() {
+    /* Set the matchMedia */
+
+    var h = $(window).height();
+    var w = $(window).width();
+
+    if (window.matchMedia("(max-width: 1025px)").matches && h === 1366) {
+      $(".skw-page__half--left .skw-page__content").css({
+        // "background-color": "#222",
+        padding: "0% 50% 0% 20%",
+      });
+      $(".skw-page__half--right .skw-page__content").css({
+        // "background-color": "#222",
+        padding: "0% 20% 0% 50%",
+      });
+    }
+    if (w === 1366 && h > 768) {
+      $(".skw-page__half--left .skw-page__content").css({
+        // "background-color": "#222",
+        padding: "0% 50% 0% 20%",
+      });
+      $(".skw-page__half--right .skw-page__content").css({
+        // "background-color": "#222",
+        padding: "0% 20% 0% 50%",
+      });
+    }
+    if (w == 1366 && h == 1024) {
+      $(".skw-page__half--left .skw-page__content").css({
+        // "background-color": "blue",
+        padding: "0% 30% 0% 30%",
+      });
+      $(".skw-page__half--right .skw-page__content").css({
+        // "background-color": "#222",
+        padding: "0% 30% 0% 30%",
+      });
+    }
+    if (w === 1240 && h === 1336) {
+      $(".skw-page__half--left .skw-page__content").css({
+        // "background-color": "#222",
+        padding: "0% 50% 0% 20%",
+      });
+      $(".skw-page__half--right .skw-page__content").css({
+        // "background-color": "#222",
+        padding: "0% 20% 0% 50%",
+      });
+    }
+    if (w === 834 && h < 1111) {
+      $(".skw-page__half--left .skw-page__content").css({
+        // "background-color": "red",
+        padding: " 0% 40% 0% 20%",
+      });
+      $(".skw-page__half--right .skw-page__content").css({
+        // "background-color": "red",
+        padding: " 0% 20% 0% 40%",
+      });
+    }
+  }
+  ipadproSize();
+  $(window).resize(function () {
+    ipadproSize();
+  });
+  $(window).on("orientationchange", function () {
+    ipadproSize();
+  });
 });
-
-//=====================
-// 手機版本滑動測試  setting
-//=====================
-
-// //獲取手機版本手勢
-// var startx, starty;
-// //獲得角度
-// function getAngle(angx, angy) {
-//   return (Math.atan2(angy, angx) * 180) / Math.PI;
-// }
-
-// //根據起點終點返回方向 1向上 2向下 3向左 4向右 0未滑動
-// function getDirection(startx, starty, endx, endy) {
-//   var angx = endx - startx;
-//   var angy = endy - starty;
-//   var result = 0;
-
-//   //如果滑動距離太短
-//   if (Math.abs(angx) < 2 && Math.abs(angy) < 2) {
-//     return result;
-//   }
-
-//   var angle = getAngle(angx, angy);
-//   if (angle >= -135 && angle <= -45) {
-//     result = 1;
-//   } else if (angle > 45 && angle < 135) {
-//     result = 2;
-//   } else if (
-//     (angle >= 135 && angle <= 180) ||
-//     (angle >= -180 && angle < -135)
-//   ) {
-//     result = 3;
-//   } else if (angle >= -45 && angle <= 45) {
-//     result = 4;
-//   }
-
-//   return result;
-// }
-// //手指接觸螢幕
-// document.addEventListener(
-//   "touchstart",
-//   function (e) {
-//     startx = e.touches[0].pageX;
-//     starty = e.touches[0].pageY;
-//   },
-//   false
-// );
-// //手指離開螢幕
-// document.addEventListener(
-//   "touchend",
-//   function (e) {
-//     var endx, endy;
-//     endx = e.changedTouches[0].pageX;
-//     endy = e.changedTouches[0].pageY;
-//     var direction = getDirection(startx, starty, endx, endy);
-//     switch (direction) {
-//       case 0:
-//         // alert("未滑動！");
-//         break;
-//       case 1:
-//         // alert("向上！")
-//         navigateUp();
-//         break;
-//       case 2:
-//         navigateDown();
-//         // alert("向下！")
-//         break;
-//       case 3:
-//         // alert("向左！")
-//         break;
-//       case 4:
-//         // alert("向右！")
-//         break;
-//       default:
-//     }
-//   },
-//   false
-// );
