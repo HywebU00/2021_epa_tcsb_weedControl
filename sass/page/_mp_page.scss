@@ -17,7 +17,7 @@
 }
 .page_section {
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   left: 8%;
   z-index: 3;
 
@@ -155,7 +155,7 @@
 .skw-page-4 {
   .skw-page__half--right {
     .skw-page__content {
-      padding: 0 30% 3.5% 30%;
+      padding: 0 40% 0 20%;
       align-items: flex-start;
       justify-content: flex-end;
     }
@@ -205,12 +205,14 @@
 
   .skw-page__half--left {
     .skw-page__content {
-      padding: 0% 30% 0% 30%;
-
+    
+      padding: 0% 40% 0% 30%;
       @include screen("mobile") {
         padding: 0 50% 0% 20%;
       }
-
+      @include screen("tablet") {
+        padding: 0 35% 0% 35%;
+      }
       @include screen("xs_mobile") {
         padding: 20% 40% 0% 20%;
       }
@@ -261,18 +263,24 @@
     &::before {
       content: "";
       z-index: 1;
-      top: -10px;
-      right: -20px;
+      top:-50px;
+      // top: -10px;
+      right: 0px;
       width: 450px;
       height: 222px;
       position: absolute;
       background-image: url(../images/img/num-01.png);
-      transform: scale(0.8);
+      transform: scale(0.5);
 
       @include screen("tablet") {
-        width: 250px;
-        background-size: contain;
-        background-repeat: no-repeat;
+        transform: scale(0.3);
+        top: -60px;
+        right: -120px;
+    
+      }
+      @include screen("mobile") {
+        right: -240px;
+    
       }
     }
 
@@ -288,6 +296,9 @@
     .skw-page__content {
       padding: 3.5% 20% 0% 20%;
       justify-content: flex-start;
+      @include screen("tablet"){
+        padding: 3.5% 35% 0% 35%;
+      }
     }
 
     p {
@@ -298,7 +309,7 @@
       text-align: start;
 
       @include screen("tablet") {
-        margin-left: 50px;
+        margin-left: 0px;
       }
     }
 
@@ -390,11 +401,12 @@
     &::before {
       content: "";
       z-index: 1;
-      top: -10px;
+      // top: -10px;
+      top:-50px;
       right: 40px;
       width: 450px;
       height: 222px;
-      transform: scale(0.8);
+      transform: scale(0.5);
       position: absolute;
       background-image: url(../images/img/num-04.png);
 
@@ -402,7 +414,8 @@
         width: 250px;
         background-size: contain;
         background-repeat: no-repeat;
-        right: 0;
+        // right: 0;
+        right: 70px;
       }
 
       @include screen("mobile") {
@@ -447,7 +460,7 @@
   .skw-page__half--right {
     &::before {
       background-image: url(../images/img/num-02.png);
-      transform: scale(0.8);
+      transform: scale(0.5);
     }
   }
 }
@@ -462,7 +475,7 @@
   .skw-page__half--left {
     &::before {
       background-image: url(../images/img/num-03.png);
-      transform: scale(0.8);
+      // transform: scale(0.5);
     }
 
     .skw-page__skewed {
@@ -545,7 +558,10 @@
 }
 .skw-page-2 .skw-page__half--right .skw-page__content{
   // color:blue;
-   padding: 0 20% 0 40% !important;
+   padding: 0 40% 0 20% !important;
+}
+.skw-page-4 .skw-page__half--right .skw-page__content{
+   padding: 0 40% 0 20% !important;
 }
 .skw-page__content>.page_btn {
   &:hover {
@@ -711,9 +727,17 @@
 }
 
 .skw-page__menu {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 9;
+  @include screen("mobile"){
+    height: auto;
+    position:relative;
+  }
   nav {
     position: absolute;
-    right: 0.5em;
+    right:-0.5em;
     top: 1.5em;
     z-index: 2;
     width: 4em;
@@ -841,7 +865,7 @@
 }
 
 .skw-page__menu_bg {
-  width: 350px;
+  width: 310px;
   height: 100%;
   right: 0;
   top: 0;
@@ -851,9 +875,9 @@
   &::after {
     position: absolute;
     content: "";
-    clip-path: polygon(80% 0, 100% 0, 100% 100%, 18% 100%);
+    clip-path: polygon(83% 0, 100% 0, 100% 100%, 25% 100%);
     background: $bg-color;
-    width: 350px;
+    width: 260px;
     height: 100%;
     right: 0;
   }

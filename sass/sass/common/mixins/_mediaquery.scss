@@ -5,6 +5,7 @@
     $tablet: "(max-width: #{$screen-sm-max})"; // max-width <= 991px
     $mobile: "(max-width: #{$screen-xs-max})"; // max-width <= 767px
     $xs_mobile: "(max-width: #{$screen-xs-mobile-max})"; // max-width <= 575px
+    $xss_mobile: "(max-width: #{$screen-xss-mobile-max})"; // max-width <= 575px
     @if $size==desktop {
         @media screen and #{$desktop} {
             @content;
@@ -27,6 +28,11 @@
     }
     @else if $size==xs_mobile {
         @media screen and #{$xs-mobile} {
+            @content;
+        }
+    }
+    @else if $size==xss_mobile {
+        @media screen and #{$xss-mobile} {
             @content;
         }
     }

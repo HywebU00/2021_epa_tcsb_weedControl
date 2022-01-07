@@ -41,7 +41,8 @@ $scrollTime: 1s;
     }
 
     &--right {
-      left: 50%;
+      // left: 50%;
+      left: 45%;
       transform: translate3d($magicVH, -100%, 0);
       @include screen("mobile") {
         transform: none;
@@ -94,9 +95,12 @@ $scrollTime: 1s;
       transform-origin: 100% 0;
     }
     .skw-page__half--right & {
-      padding-left: 30%;
-      padding-right: 30%;
+      padding-left: 20%;
+      padding-right: 40%;
       transform-origin: 0 100%;
+      @include screen("notebook") {
+        padding-left: 30%;
+      }
     }
 
     .skw-page.inactive & {

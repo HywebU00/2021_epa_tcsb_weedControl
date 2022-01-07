@@ -296,10 +296,10 @@ $(document).ready(function () {
 
     var h = $(window).height();
     var w = $(window).width();
-
+    console.log("h" + h + "__" + "w" + w);
     if (window.matchMedia("(max-width: 1025px)").matches && h === 1366) {
       $(".skw-page__half--left .skw-page__content").css({
-        // "background-color": "#222",
+        //  "background-color": "#222",
         padding: "0% 50% 0% 20%",
       });
       $(".skw-page__half--right .skw-page__content").css({
@@ -320,15 +320,14 @@ $(document).ready(function () {
     if (w >= 1360 && w <= 1366 && h <= 1025 && h >= 1020) {
       $(".skw-page__half--left .skw-page__content").css({
         // "background-color": "blue",
-        padding: "0% 30% 0% 30%",
+        padding: "0% 40% 0% 30%",
       });
       $(".skw-page__half--right .skw-page__content").css({
-        // "background-color": "#222",
+        // "background-color": "red",
         padding: "0% 30% 0% 30%",
       });
     }
-    if (h <= 1367 && h >= 3164 && w <= 1023) {
-      console.log("2");
+    if (1367 >= h && h <= 3164 && w <= 1023 && w > 1020) {
       $(".skw-page__half--left .skw-page__content").css({
         // "background-color": "#638",
         padding: "0% 50% 0% 20%",
@@ -337,25 +336,83 @@ $(document).ready(function () {
         // "background-color": "#222",
         padding: "0% 20% 0% 50%",
       });
+      $(
+        ".skw-page-2 .skw-page__half--left::before, .skw-page-4 .skw-page__half--left::before"
+      ).css({
+        right: "-100px",
+      });
+    }
+
+    if (1367 >= h && h <= 3164 && w <= 768 && w > 465) {
+      $(".skw-page__half--left .skw-page__content").css({
+        // "background-color": "green",
+        padding: "0% 50% 0% 20%",
+      });
+      $(".skw-page__half--right .skw-page__content").css({
+        // "background-color": "#222",
+        padding: "0% 30% ",
+      });
+      $(
+        ".skw-page-2 .skw-page__half--left::before, .skw-page-4 .skw-page__half--left::before"
+      ).css({
+        right: "-100px",
+      });
+    }
+
+    if (h > 760 && h <= 768 && 1240 <= w && w > 1030) {
+      $(".skw-page__half--left .skw-page__content").css({
+        // "background-color": "#637",
+        padding: "0% 40% 0% 30%",
+      });
+      $(".skw-page__half--right .skw-page__content").css({
+        // "background-color": "#633",
+        padding: "0% 40% 0% 30%",
+      });
+      $(".skw-page__half--left .skw-page__content p").css({
+        "margin-left": "10px",
+      });
+      $(
+        ".skw-page-2 .skw-page__half--left::before, .skw-page-4 .skw-page__half--left::before"
+      ).css({
+        right: "-100px",
+      });
     }
     if (w >= 833 && w <= 837 && h <= 1113) {
       $(".skw-page__half--left .skw-page__content").css({
-        // "background-color": "#567",
+        "background-color": "#567",
         padding: " 0% 45% 0% 15%",
+      });
+      $(".skw-page__half--left .skw-page__content p").css({
+        "margin-left": "150px",
       });
       $(".skw-page__half--right .skw-page__content").css({
         // "background-color": "#567",
-        padding: " 0% 15% 0% 45%",
+        padding: " 0% 30% 0% 30%",
+      });
+      $(".skw-page__half--right .skw-page__content p").css({
+        // "background-color": "#567",
+        "margin-left": "150px",
       });
     }
     if (h >= 833 && h <= 837 && w <= 1113) {
       $(".skw-page__half--left .skw-page__content").css({
         // "background-color": "red",
-        padding: " 0% 30% 0% 30%",
+        padding: " 0% 40% 0% 30%",
       });
       $(".skw-page__half--right .skw-page__content").css({
         // "background-color": "red",
-        padding: " 0% 30% 0% 30%",
+        padding: " 0% 40% 0% 30%",
+      });
+    }
+    //ipad 1024 X 768
+    if (h >= 833 && h <= 837 && w <= 1113) {
+      $(".skw-page__half--left .skw-page__content").css({
+        // "background-color": "red",
+        padding: " 0% 40% 0% 30%",
+      });
+      $(".skw-page__half--right .skw-page__content").css({
+        // "background-color": "red",
+        padding: " 0% 40% 0% 30%",
       });
     }
   }
