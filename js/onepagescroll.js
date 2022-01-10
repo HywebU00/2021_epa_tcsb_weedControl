@@ -77,7 +77,7 @@ $(document).ready(function () {
     pgWidth = $(window).width();
 
     $(".widthsize").html(pgWidth);
-    if (pgWidth < 767 || pgWidth === 767) {
+    if (pgWidth < 769 || pgWidth === 768) {
       return;
     }
     if (scrolling) return;
@@ -343,7 +343,7 @@ $(document).ready(function () {
       });
     }
 
-    if (1367 >= h && h <= 3164 && w <= 768 && w > 465) {
+    if (1367 >= h && h <= 3164 && w <= 769 && w > 465) {
       $(".skw-page__half--left .skw-page__content").css({
         // "background-color": "green",
         padding: "0% 50% 0% 20%",
@@ -359,9 +359,9 @@ $(document).ready(function () {
       });
     }
 
-    if (h > 760 && h <= 768 && 1240 <= w && w > 1030) {
+    if (h > 760 && h <= 769 && 1240 <= w && w > 1030) {
       $(".skw-page__half--left .skw-page__content").css({
-        // "background-color": "#637",
+        "background-color": "#637",
         padding: "0% 40% 0% 30%",
       });
       $(".skw-page__half--right .skw-page__content").css({
@@ -379,7 +379,7 @@ $(document).ready(function () {
     }
     if (w >= 833 && w <= 837 && h <= 1113) {
       $(".skw-page__half--left .skw-page__content").css({
-        "background-color": "#567",
+        // "background-color": "#567",
         padding: " 0% 45% 0% 15%",
       });
       $(".skw-page__half--left .skw-page__content p").css({
