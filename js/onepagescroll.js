@@ -357,11 +357,17 @@ $(document).ready(function () {
       ).css({
         right: "-100px",
       });
+      $(
+        ".skw-page-2 .skw-page__half--right .skw-page__skewed, .skw-page-4 .skw-page__half--right .skw-page__skewed "
+      ).css({
+        // "background-color": "#637",
+        right: "-156%",
+      });
     }
 
     if (h > 760 && h <= 769 && 1240 <= w && w > 1030) {
       $(".skw-page__half--left .skw-page__content").css({
-        "background-color": "#637",
+        // "background-color": "#637",
         padding: "0% 40% 0% 30%",
       });
       $(".skw-page__half--right .skw-page__content").css({
