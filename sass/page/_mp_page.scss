@@ -726,7 +726,10 @@
   }
 }
 #mp_page .skw-page__menu {
-  position: fixed
+  position: fixed;
+  @include screen("mobile"){
+    position:relative;
+  }
 }
 .skw-page__menu {
   right:0;
@@ -735,7 +738,7 @@
   z-index: 9;
   @include screen("mobile"){
     height: auto;
-    position:relative;
+    // position:relative;
   }
   nav {
     position: absolute;
