@@ -727,7 +727,8 @@
 }
 
 .skw-page__menu {
-  width: 100%;
+  // width: 100%;
+  right:0;
   height: 100vh;
   position: fixed;
   z-index: 9;
@@ -865,7 +866,7 @@
 }
 
 .skw-page__menu_bg {
-  width: 310px;
+  width: 200px;
   height: 100%;
   right: 0;
   top: 0;
