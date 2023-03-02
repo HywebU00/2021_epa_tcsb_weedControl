@@ -111,8 +111,7 @@
 .ui-slider-float .ui-slider-handle.ui-state-focus .ui-slider-tip-label,
 .ui-slider-float .ui-slider-handle:focus .ui-slider-tip,
 .ui-slider-float .ui-slider-handle.ui-state-focus .ui-slider-tip-label,
-.ui-slider-float .ui-slider-handle:focus .ui-slider-tip-label
-.ui-slider-float .ui-slider-handle.ui-state-focus .ui-slider-tip-label {
+.ui-slider-float .ui-slider-handle:focus .ui-slider-tip-label .ui-slider-float .ui-slider-handle.ui-state-focus .ui-slider-tip-label {
   outline: none;
 }
 
@@ -176,7 +175,7 @@
 /* give the tooltip a css triangle arrow */
 .ui-slider-float .ui-slider-tip:after,
 .ui-slider-float .ui-slider-pip .ui-slider-tip-label:after {
-  content: " ";
+  content: ' ';
   width: 0;
   height: 0;
   border: 5px solid rgba(255, 255, 255, 0);
@@ -190,7 +189,7 @@
 /* put a 1px border on the tooltip arrow to match tooltip border */
 .ui-slider-float .ui-slider-tip:before,
 .ui-slider-float .ui-slider-pip .ui-slider-tip-label:before {
-  content: " ";
+  content: ' ';
   width: 0;
   height: 0;
   border: 5px solid rgba(255, 255, 255, 0);
@@ -224,12 +223,12 @@
   margin-left: 0px;
   left: -60px;
   color: #333;
-  -webkit-transition-duration: 200ms, 200ms, 0;
-  transition-duration: 200ms, 200ms, 0;
+  -webkit-transition-duration: 200ms, 200ms, 0ms;
+  transition-duration: 200ms, 200ms, 0ms;
   -webkit-transition-property: opacity, left, visibility;
   transition-property: opacity, left, visibility;
-  -webkit-transition-delay: 0, 0, 200ms;
-  transition-delay: 0, 0, 200ms;
+  -webkit-transition-delay: 0ms, 0ms, 200ms;
+  transition-delay: 0ms, 0ms, 200ms;
 }
 
 .ui-slider-vertical.ui-slider-float .ui-slider-handle:hover .ui-slider-tip,
@@ -298,18 +297,18 @@
 /* SELECTED STATES */
 /* Comment out this chuck of code if you don't want to have
         the new label colours shown */
-.ui-slider-pips [class*=ui-slider-pip-initial] {
+.ui-slider-pips [class*='ui-slider-pip-initial'] {
   font-weight: bold;
-  color: #14CA82;
+  color: #14ca82;
 }
 
 .ui-slider-pips .ui-slider-pip-initial-2 {
-  color: #1897C9;
+  color: #1897c9;
 }
 
-.ui-slider-pips [class*=ui-slider-pip-selected] {
+.ui-slider-pips [class*='ui-slider-pip-selected'] {
   font-weight: bold;
-  color: #FF7A00;
+  color: #ff7a00;
 }
 
 .ui-slider-pips .ui-slider-pip-inrange {
@@ -317,10 +316,10 @@
 }
 
 .ui-slider-pips .ui-slider-pip-selected-2 {
-  color: #E70081;
+  color: #e70081;
 }
 
-.ui-slider-pips [class*=ui-slider-pip-selected] .ui-slider-line,
+.ui-slider-pips [class*='ui-slider-pip-selected'] .ui-slider-line,
 .ui-slider-pips .ui-slider-pip-inrange .ui-slider-line {
   background: black;
 }
