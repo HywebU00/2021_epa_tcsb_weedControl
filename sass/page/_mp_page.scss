@@ -91,11 +91,27 @@
     }
 
     img {
-      height: 43px;
-      width: 43px;
-      margin-bottom: 0.2em;
-
+      // height: 43px;
+      // width: 43px;
+      // margin-bottom: 0.2em;
+      &.pc_logo {
+        width: 3.2em;
+        margin-left: -0.6em;
+      }
+      &.mobile_logo {
+        display: none;
+      }
       @include screen('mobile') {
+        &.pc_logo {
+          display: none;
+        }
+        &.mobile_logo {
+          display: block;
+          max-width: unset;
+          max-height: 2.5em;
+          margin-top: 0.5em;
+          margin-left: -0.5em;
+        }
         transform: scale(1);
         margin-bottom: 0;
         margin-right: 0.2em;
@@ -103,7 +119,7 @@
     }
 
     a {
-      padding-top: 0.5em;
+      // padding-top: 0.5em;
 
       span {
         display: flex;
