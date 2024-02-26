@@ -1,4 +1,4 @@
-.innerpage>.container {
+.innerpage > .container {
   padding: 0 30px;
 }
 
@@ -27,13 +27,11 @@
     &::after {
       width: 250px;
       clip-path: polygon(70% 0, 100% 0, 100% 100%, 18% 100%);
-      background: linear-gradient(0deg,
-          rgba(94, 148, 194, 0.6) 32%,
-          rgba(128, 188, 91, 1) 70%);
+      background: linear-gradient(0deg, rgba(94, 148, 194, 0.6) 32%, rgba(128, 188, 91, 1) 70%);
     }
   }
 
-  @include screen("mobile") {
+  @include screen('mobile') {
     height: 400px;
   }
 }
@@ -49,19 +47,16 @@
   background-position-y: center;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
 
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg,
-        rgba(0, 0, 0, 0.6) 0%,
-        rgba(0, 0, 0, 0) 45%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 45%);
   }
 }
-
 
 h2.title {
   color: #fff;
@@ -71,7 +66,7 @@ h2.title {
   z-index: 2;
   margin-top: -2em;
 
-  @include screen("mobile") {
+  @include screen('mobile') {
     font-size: 2.5em;
   }
 }
@@ -106,7 +101,6 @@ h2.title {
 
 .np {
   .sub_menu {
-
     //修改新增
     ul {
       justify-content: center;
@@ -120,16 +114,13 @@ h2.title {
       position: relative;
       overflow: hidden;
       // margin: 10px;
-      @include screen("tablet") {
+      @include screen('tablet') {
         width: 48%;
       }
 
-      @include screen("mobile") {
+      @include screen('mobile') {
         width: 98%;
-
       }
-      
-      
     }
 
     //修改新增
@@ -144,7 +135,7 @@ h2.title {
       align-items: center;
       padding: 1em;
       font-weight: 500;
-     
+
       text-align: center;
       transition: all 1s;
       position: relative;
@@ -152,28 +143,27 @@ h2.title {
       padding-left: 4.2em;
       background-color: #f1f3f5;
       border: 2px solid #f1f3f5;
-      &::after{
+      &::after {
         counter-increment: my-sec-counter;
-        content: counter(my-sec-counter) "";
+        content: counter(my-sec-counter) '';
         position: absolute;
         z-index: -1;
         left: 0;
         font-size: 6em;
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
         font-weight: bolder;
         font-style: italic;
         color: rgba(173, 181, 189, 0.4);
-      
       }
 
-      @include screen("mobile") {
+      @include screen('mobile') {
         min-height: unset;
       }
 
-      &:hover{
+      &:hover {
         background-color: $primaryColor;
         color: #fff;
-        &::after{
+        &::after {
           color: rgba(255, 255, 255, 0.2);
         }
       }
@@ -220,7 +210,6 @@ a:hover {
       li {
         margin-right: 0.5em;
       }
-
     }
 
     p {
@@ -244,7 +233,7 @@ a:hover {
         margin-left: 0.5em;
       }
 
-      @include screen("mobile") {
+      @include screen('mobile') {
         justify-content: flex-start;
       }
     }
@@ -265,7 +254,7 @@ a:hover {
         }
       }
 
-      @include screen("mobile") {
+      @include screen('mobile') {
         text-align: start;
         margin-top: 0;
         margin-bottom: 0.8em;
@@ -305,7 +294,7 @@ a:hover {
         }
       }
 
-      @include screen("mobile") {
+      @include screen('mobile') {
         flex-direction: unset;
 
         a {
@@ -325,13 +314,13 @@ a:hover {
   &::after {
     border-width: 530px 165px 0 0;
 
-    @include screen("mobile") {
+    @include screen('mobile') {
       border-width: unset;
     }
   }
 }
 
-.innerpage>.container {
+.innerpage > .container {
   margin-bottom: 2em;
 }
 
@@ -348,7 +337,7 @@ a:hover {
       border-bottom: 0;
       margin-bottom: 0;
       color: #000;
-      @include screen("xs_mobile") {
+      @include screen('xs_mobile') {
         line-height: 1em;
       }
     }
@@ -376,7 +365,6 @@ a:hover {
       height: 100px;
       box-shadow: 1px 9px 19px -11px rgba(0, 0, 0, 0.2);
     }
-
   }
 
   .results_section_content {
@@ -403,7 +391,7 @@ a:hover {
       background: rgba(0, 0, 0, 0);
       text-align: center;
 
-      .results_num{
+      .results_num {
         font-size: 1.1em;
         margin-bottom: 0.5em;
         color: #000;
@@ -413,7 +401,7 @@ a:hover {
           font-weight: 200;
           margin-right: 0.1em;
         }
-        + div{
+        + div {
           color: #000;
           font-weight: 500;
         }
@@ -430,37 +418,37 @@ a:hover {
       margin: 0;
       width: 100%;
     }
-    p{
-     display: flex;
-     align-items: flex-start;
-      .apply{
+    p {
+      display: flex;
+      align-items: flex-start;
+      .apply {
         padding-right: 1px;
         // line-height: 1em;
-     i{
-      background: #15751c;
-      
-     }
-     +span{
-      line-height: 1.45em;
-      margin-left: 0.5em;
-      text-align: left;
-    }
+        i {
+          background: #15751c;
+        }
+        + span {
+          line-height: 1.45em;
+          margin-left: 0.5em;
+          text-align: left;
+        }
       }
-      .not_apply{
+      .not_apply {
         padding-right: 1px;
-     i{
-      background: #d8a448;
-     }+span{
-      line-height: 1.45em;
-      margin-left: 0.5em;
-      text-align: left;
-    }
+        i {
+          background: #d8a448;
+        }
+        + span {
+          line-height: 1.45em;
+          margin-left: 0.5em;
+          text-align: left;
+        }
       }
-      span i{
+      span i {
         width: 20px;
-        height: 20px;     
-        display:inline-block;
-       }
+        height: 20px;
+        display: inline-block;
+      }
     }
   }
 
@@ -475,22 +463,22 @@ a:hover {
       width: 100%;
       margin-left: -3%;
 
-      @include screen("xs_mobile") {
+      @include screen('xs_mobile') {
         margin-left: -10%;
       }
 
       #slider-bar {
         // width: 35%;
-        width: 40%;
+        width: 45%;
         height: 13px;
         background: $primaryColor;
         z-index: 1;
         border-radius: 10px;
         margin-left: -6%;
-        @include screen("mobile") {
+        @include screen('mobile') {
           margin-left: -14%;
         }
-        @include screen("xs_mobile") {
+        @include screen('xs_mobile') {
           // width: 45%;
           margin-left: -6%;
           width: 55%;
@@ -503,7 +491,6 @@ a:hover {
         .ui-state-focus,
         .ui-state-hover {
           border: 2px solid $aFocus;
-
         }
 
         .ui-slider-handle {
@@ -545,17 +532,16 @@ a:hover {
           color: $primaryColor;
           font-weight: 700 !important;
         }
-
       }
 
       .execute_text {
         position: absolute;
         right: 16%;
-        bottom: -30px;
+        bottom: -25px;
         font-weight: 500;
         margin-bottom: 0em;
 
-        @include screen("xs_mobile") {
+        @include screen('xs_mobile') {
           right: -5%;
         }
       }
@@ -569,11 +555,10 @@ a:hover {
         border-radius: 10px;
         background: #ccc;
 
-        @include screen("xs_mobile") {
+        @include screen('xs_mobile') {
           width: 65%;
         }
       }
-
     }
 
     .year_content {
@@ -608,12 +593,11 @@ a:hover {
             width: 100%;
             background-color: unset;
             padding: 0;
-            +p{
+            + p {
               justify-content: center;
               line-height: 2em;
             }
           }
-         
 
           h3 {
             margin-right: 0.8em;
@@ -625,18 +609,18 @@ a:hover {
             // min-width: 100px;
           }
 
-          @include screen("tablet") {
+          @include screen('tablet') {
             width: 70%;
           }
         }
 
-        @include screen("tablet") {
+        @include screen('tablet') {
           display: flex;
           justify-content: center;
         }
       }
 
-      @include screen("tablet") {
+      @include screen('tablet') {
         display: block;
 
         figure {
@@ -654,7 +638,7 @@ a:hover {
   .country_content {
     // margin: 0em 12em 3em 12em;
 
-    @include screen("mobile") {
+    @include screen('mobile') {
       margin: 3em 3em;
     }
 
@@ -664,7 +648,7 @@ a:hover {
       div {
         background: rgba(238, 238, 238, 0.6);
         padding: 1em;
-        margin: 1em .2em;
+        margin: 1em 0.2em;
         // min-height: 300px;
         height: 100%;
         display: flex;
@@ -700,14 +684,13 @@ a:hover {
     justify-content: center;
     margin-bottom: 5em;
 
-    @include screen("mobile") {
+    @include screen('mobile') {
       flex-wrap: wrap;
 
       .img-container {
         width: 80%;
       }
     }
-
 
     .img-container {
       picture {
@@ -726,10 +709,8 @@ a:hover {
             content: '';
             background: rgba(0, 0, 0, 0.1) url(../images/img/play_btn_wh.png) no-repeat center;
             transition: all 0.2s;
-
           }
         }
-
       }
 
       h3 {
@@ -765,7 +746,7 @@ a:hover {
         }
       }
 
-      +div {
+      + div {
         display: flex;
         justify-content: center;
 
@@ -780,7 +761,6 @@ a:hover {
         }
       }
     }
-
   }
 
   .npSlider {
@@ -792,14 +772,13 @@ a:hover {
       right: 40%;
       background: url(../images/img/slider_btn_next.png) center no-repeat rgba(0, 0, 0, 0);
 
-      @include screen("mobile") {
+      @include screen('mobile') {
         right: 2%;
       }
     }
 
     .slick-prev {
-
-      background: url(../images/img/slider_btn_pre.png) center no-repeat rgba(0, 0, 0, 0)
+      background: url(../images/img/slider_btn_pre.png) center no-repeat rgba(0, 0, 0, 0);
     }
 
     .img-container {
@@ -827,7 +806,7 @@ a:hover {
 
             display: block;
             letter-spacing: 0.1em;
-            border-bottom:1px solid #fff;
+            border-bottom: 1px solid #fff;
           }
 
           h3 {
@@ -844,7 +823,7 @@ a:hover {
             }
           }
 
-          @include screen("mobile") {
+          @include screen('mobile') {
             h3 {
               font-size: 1em;
             }
@@ -853,8 +832,7 @@ a:hover {
             padding-left: 10%;
           }
 
-          @include screen("xs_mobile") {
-
+          @include screen('xs_mobile') {
             h3,
             span {
               font-size: 0.8em;
@@ -881,13 +859,10 @@ a:hover {
       }
     }
 
-    @include screen("mobile") {
+    @include screen('mobile') {
       margin-bottom: 3em;
     }
   }
-
-
-
 }
 
 .file_section {
@@ -940,7 +915,7 @@ a:hover {
     }
   }
 
-  @include screen("mobile") {
+  @include screen('mobile') {
     ul {
       display: block;
     }
@@ -949,13 +924,12 @@ a:hover {
       width: 150px;
       height: 150px;
       margin: 2em auto;
-
     }
   }
 }
 
 .file_section {
-  +.publish_info {
+  + .publish_info {
     ul {
       margin-top: 0;
     }
