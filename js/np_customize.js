@@ -1,7 +1,7 @@
 // 自行加入的JS請寫在這裡
 $(function () {
   // 首頁輪播
-  $(".npSlider").slick({
+  $('.npSlider').slick({
     mobileFirst: true,
     dots: false,
     arrows: true,
@@ -10,17 +10,15 @@ $(function () {
     autoplay: true,
     fade: true,
     lazyLoaded: true,
-    lazyLoad: "ondemand",
-    ease: "ease",
+    lazyLoad: 'ondemand',
+    ease: 'ease',
     customPaging: function (slider, i) {
-      var title = $(slider.$slides[i]).find("img").attr("alt").trim();
-      return $('<button type="button" aria-label="' + title + '"/>').text(
-        title
-      );
+      var title = $(slider.$slides[i]).find('img').attr('alt').trim();
+      return $('<button type="button" aria-label="' + title + '"/>').text(title);
     },
   });
   // 廣告輪播
-  $(".adSlider").slick({
+  $('.adSlider').slick({
     mobileFirst: true,
     dots: false,
     infinite: true,
@@ -30,8 +28,8 @@ $(function () {
     autoplay: true,
     arrow: true,
     lazyLoaded: true,
-    lazyLoad: "ondemand",
-    ease: "ease",
+    lazyLoad: 'ondemand',
+    ease: 'ease',
     responsive: [
       {
         breakpoint: 1200,
@@ -60,7 +58,7 @@ $(function () {
     ],
   });
   //燈箱slick+lightBox組合
-  $(".cp_slider").slick({
+  $('.cp_slider').slick({
     dots: true,
     infinite: true,
     speed: 500,
@@ -72,8 +70,8 @@ $(function () {
     pauseOnFocus: true,
     focusOnSelect: true,
     accessibility: true,
-    lazyLoad: "ondemand",
-    ease: "ease",
+    lazyLoad: 'ondemand',
+    ease: 'ease',
     responsive: [
       {
         breakpoint: 768,
@@ -103,15 +101,15 @@ $(function () {
       },
     ],
   });
-  $(".cp_slider").slickLightbox({
-    caption: "caption",
-    lazyLoad: "ondemand",
-    useHistoryApi: "true",
-    ease: "ease",
+  $('.cp_slider').slickLightbox({
+    caption: 'caption',
+    lazyLoad: 'ondemand',
+    useHistoryApi: 'true',
+    ease: 'ease',
     lazy: true,
   });
   //
-  $(".cppic_slider").slick({
+  $('.cppic_slider').slick({
     dots: true,
     infinite: false,
     speed: 500,
@@ -155,31 +153,28 @@ $(function () {
     ],
   });
   // cp_photo
-  $(".Slider-for").on(
-    "init reInit afterChange",
-    function (event, slick, currentSlide) {
-      var i = (currentSlide ? currentSlide : 0) + 1;
-      $(".controls").html(i + "/" + slick.slideCount);
-    }
-  );
-  $(".Slider-for").slick({
+  $('.Slider-for').on('init reInit afterChange', function (event, slick, currentSlide) {
+    var i = (currentSlide ? currentSlide : 0) + 1;
+    $('.controls').html(i + '/' + slick.slideCount);
+  });
+  $('.Slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     fade: true,
     swipe: false,
     swipeToSlide: false,
-    lazyLoad: "ondemand",
-    asNavFor: ".Slider-nav",
+    lazyLoad: 'ondemand',
+    asNavFor: '.Slider-nav',
     infinite: true,
   });
-  $(".Slider-nav").slick({
+  $('.Slider-nav').slick({
     slidesToShow: 2,
     slidesToScroll: 1,
-    asNavFor: ".Slider-for",
+    asNavFor: '.Slider-for',
     dots: true,
     arrows: true,
-    lazyLoad: "ondemand",
+    lazyLoad: 'ondemand',
     focusOnSelect: true,
     infinite: true,
   });
@@ -213,25 +208,27 @@ $(function () {
   // });
 
   //skw-page__searchContent 搜尋匡打開與關上
-  $(".searchCtrl").click(function () {
-    $(".skw-page__searchContent").toggleClass("show");
+  $('.searchCtrl').click(function () {
+    $('.skw-page__searchContent').toggleClass('show');
   });
 });
 
-$(".condition").click(function (e) {
+$('.condition').click(function (e) {
   e.preventDefault();
-  $(".condition_block").slideToggle();
+  $('.condition_block').slideToggle();
 });
 
 //大事記 event
 $(function () {
-  $(".eventblock .event .content").css("display", "none");
-  $(".eventblock .event .topic>a").click(function () {
-    $(".eventblock .event .content").stop().slideUp();
-    $(this).parent(".topic").next(".content").stop().slideToggle();
-
-    $(".event .topic>a").removeClass("trunicon");
-    $(this).stop().toggleClass("trunicon");
+  $('.eventblock .event .content').css('display', 'none');
+  $('.eventblock .event .topic>a').click(function () {
+    $('.eventblock .event .content').stop().slideUp();
+    $(this).parent('.topic').next('.content').stop().slideToggle();
+    $('.event .topic>a').removeClass('trunicon');
+    $(this).stop().toggleClass('trunicon');
+    if ($(this).parent('.topic').hasClass('noContent')) {
+      $(this).parent('.topic').next('.content').remove().slideToggle();
+    }
   });
 });
 
@@ -240,19 +237,19 @@ $(function () {
 //===================================
 $(function () {
   //tab鍵 在menu間遊走
-  $(".sidebarCtrl").click(function () {
-    $(".sidebarClose").focus();
+  $('.sidebarCtrl').click(function () {
+    $('.sidebarClose').focus();
   });
   //關閉menu
-  $(".menu_area")
-    .find("li:last>a")
+  $('.menu_area')
+    .find('li:last>a')
     .focusout(function () {
-      $(".menu_area").hide();
+      $('.menu_area').hide();
     });
   //tab鍵 在搜尋鍵間遊走
-  $(".skw-page__search")
-    .find("li:last>a")
+  $('.skw-page__search')
+    .find('li:last>a')
     .focusout(function () {
-      $(".skw-page__search").hide();
+      $('.skw-page__search').hide();
     });
 });
