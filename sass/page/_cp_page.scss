@@ -57,7 +57,7 @@
   .video {
     width: 640px;
 
-    @include screen("mobile") {
+    @include screen('mobile') {
       width: 100%;
     }
   }
@@ -158,7 +158,6 @@
 }
 
 .slick-dots li button {
-
   &:hover,
   &::before,
   &:focus {
@@ -192,17 +191,16 @@
   .data {
     ul {
       display: flex;
-      li{
+      li {
         font-size: 1.1428em;
       }
     }
-
   }
 
   .share2 {
     display: flex;
     align-items: center;
-    span{
+    span {
       font-size: 1.1428em;
     }
     ul {
@@ -228,22 +226,22 @@
           height: 35px;
           width: 35px;
         }
-        .fb{
+        .fb {
           background: #3b5997;
         }
-        .google{
+        .google {
           background: #df2f2f;
         }
-        .twitter{
-          background:#55acec;
+        .twitter {
+          background: #000;
         }
-        .line{
+        .line {
           background: #00c214;
         }
-        .forward{
+        .forward {
           background: #87cd27;
         }
-        .print{
+        .print {
           background: #5c64b5;
         }
       }
@@ -255,14 +253,13 @@
     display: flex;
     ul {
       margin-bottom: 0;
-      @include screen('mobile'){
-      display: block;
-      padding: 0;
+      @include screen('mobile') {
+        display: block;
+        padding: 0;
       }
-       @media screen and (max-width:540px) {
-      margin-top: 1em;
-    }
-   
+      @media screen and (max-width: 540px) {
+        margin-top: 1em;
+      }
     }
   }
 
@@ -273,11 +270,10 @@
     flex: none;
     padding: 0 1em;
     border-left: 1px solid #ccc;
-    
+
     // @media screen and (max-width:676px) {
     //   width: 100%;
     //   border: 0;
     // }
   }
-
 }
