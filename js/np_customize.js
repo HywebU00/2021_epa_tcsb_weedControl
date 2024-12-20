@@ -222,12 +222,16 @@ $('.condition').click(function (e) {
 $(function () {
   $('.eventblock .event .content').css('display', 'none');
   $('.eventblock .event .topic>a').click(function () {
-    $('.eventblock .event .content').stop().slideUp();
-    $(this).parent('.topic').next('.content').stop().slideToggle();
-    $('.event .topic>a').removeClass('trunicon');
-    $(this).stop().toggleClass('trunicon');
-    if ($(this).parent('.topic').hasClass('noContent')) {
-      $(this).parent('.topic').next('.content').remove().slideToggle();
+    if ($(this).parent().next('.content').is(':hidden')) {
+      $(this).parent('.topic').siblings('.content').slideUp();
+      $(this).parent('.topic').siblings('.topic').children('a').removeClass('trunicon');
+      $(this).parents('.event').siblings().children('.content').slideUp();
+      $(this).parents('.event').siblings().children('.topic').children('a').removeClass('trunicon');
+      $(this).parent('.topic').next('.content').slideDown();
+      $(this).stop().addClass('trunicon');
+    } else {
+      $(this).parent('.topic').next('.content').slideUp();
+      $(this).stop().removeClass('trunicon');
     }
   });
 });
