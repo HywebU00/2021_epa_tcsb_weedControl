@@ -166,14 +166,16 @@
     margin: 10px 0px 10px 25px;
     padding: 0 0 0 40px;
     border-left: 6px solid lighten($primaryColor, 45%);
-
+    .topic {
+      border-bottom: 1px dotted #333;
+      padding-bottom: 8px;
+      padding-top: 8px;
+    }
     .topic a {
       display: block;
       position: relative;
-      border-bottom: 1px dotted #333;
       color: #333;
-      padding: 8px 30px 8px 0;
-
+      padding: 0 30px 0 0;
       &::after {
         content: '';
         height: 10px;
@@ -182,13 +184,14 @@
         border-color: transparent #666 #666 transparent;
         position: absolute;
         right: 5px;
-        top: 12px;
+        top: 4px;
         transform: rotate(45deg);
         transition: 0.5s;
       }
 
       &:focus {
         color: $primaryColor;
+        box-shadow: none;
       }
     }
     .topic.noContent {
