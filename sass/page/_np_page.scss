@@ -468,8 +468,7 @@ a:hover {
       }
 
       #slider-bar {
-        // width: 35%;
-        width: 45%;
+        width: 46%;
         height: 13px;
         background: $primaryColor;
         z-index: 1;
@@ -481,7 +480,7 @@ a:hover {
         @include screen('xs_mobile') {
           // width: 45%;
           margin-left: -6%;
-          width: 55%;
+          width: 50%;
         }
 
         .ui-state-default {
